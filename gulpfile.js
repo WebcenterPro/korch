@@ -15,7 +15,7 @@ var gulp         = require('gulp'),                         // GULP
     sprite       = require('gulp.spritesmith'),             // Создание спрайтов
     plumber      = require('gulp-plumber'),                 // Перехват ошибок
     gutil        = require('gulp-util'),                    // Различные вспомогательные утилиты
-    cssImport    = require('gulp-cssimport'),               // Работа @import для CSS файлов
+    cssImport    = require('gulp-cssimport'),               // Работа @import
 	 path         = require('path')                          // Для работы с путями
 ;
 /* ================================ */
@@ -69,6 +69,7 @@ gulp.task('html', function () {
 gulp.task('sass', function() {
 	return gulp.src(app + 'src/style.scss') // Берём источник
 		.pipe(plumber(err)) // Отслеживаем ошибки
+		.pipe(cssImport()) // Запускаем @import
 		.pipe(sass({outputStyle: 'expanded'})) // Преобразуем SCSS в CSS
 		.pipe(queries()) // Объединяем медиа запросы
 		.pipe(autoprefixer(['last 15 versions', '>1%', 'ie 8', 'ie 7'], {cascade: true})) // Создаём префиксы
@@ -81,7 +82,7 @@ gulp.task('sass', function() {
 gulp.task('css-libs', function() {
 	return gulp.src(app + 'src/libs.scss') // Берём источник
 		.pipe(plumber(err)) // Отслеживаем ошибки
-		.pipe(cssImport()) // Загружаем в файл все CSS
+		.pipe(cssImport()) // Запускаем @import
 		.pipe(sass({outputStyle: 'compressed'})) // Преобразуем SCSS в CSS
 		.pipe(rename({suffix: '.min'})) // Добавляем суффикс ".min"
 		.pipe(gulp.dest(dist + 'css')) // Выгружаем
@@ -156,9 +157,9 @@ gulp.task('build', [
 gulp.task('watch', function() {
 	var watcherHtml = gulp.watch(app + '**/*.html', ['html']); // Наблюдение за HTML файлами
 	gulp.watch([app + 'src/**/*.scss', '!' + app + 'src/libs.scss'], ['sass']); // Наблюдение за своими SCSS файлами
-	gulp.watch(app + 'src/libs.scss', ['css-libs']); // Наблюдение за скачанными CSS файлами
+	gulp.watch([app + 'src/libs.scss', app + 'libs/**/*.css'], ['css-libs']); // Наблюдение за скачанными CSS файлами
 	gulp.watch([app + 'src/**/*.js', '!' + app + 'src/libs.js'], ['js']); // Наблюдение за своими JS файлами
-	gulp.watch(app + 'src/libs.js', ['js-libs']); // Наблюдение за скачанными JS файлами
+	gulp.watch([app + 'src/libs.js', app + 'libs/**/*.js'], ['js-libs']); // Наблюдение за скачанными JS файлами
 	gulp.watch(app + 'img/*', ['img']); // Наблюдение за картинками
 	gulp.watch(app + 'fonts/*', ['fonts']); // Наблюдение за шрифтами
 
@@ -174,9 +175,9 @@ gulp.task('watch', function() {
 
 
 
-/* //////////////////////////////// */
-/* /////// СЛУЖЕБНЫЕ ТАСКИ //////// */
-/* //////////////////////////////// */
+/* -------------------------------- */
+/*         СЛУЖЕБНЫЕ ТАСКИ          */
+/* -------------------------------- */
 
 /* ===== КОМАНДА ПО УМОЛЧАНИЮ ===== */
 gulp.task('default', ['build', 'browser-sync', 'watch']);
@@ -200,7 +201,3 @@ gulp.task('sprite', function() {
 	spriteData.css.pipe(gulp.dest(app + 'sprites/')); // путь, куда сохраняем стили
 });
 /* ================================ */
-
-/* //////////////////////////////// */
-/* //////////////////////////////// */
-/* //////////////////////////////// */
