@@ -3,6 +3,7 @@
 	position: fixed;
 	border-bottom: 1px solid $color-lighter;
 	font-size: 1.8rem;
+	z-index: 50;
 
 	&__left {
 		float: left;

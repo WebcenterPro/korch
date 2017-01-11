@@ -6,9 +6,20 @@
 	}
 
 	&__main {
-		height: 220px;
 		padding-top: 61px;
 		background: url('/img/header.png') no-repeat 50% 0;
 		background-clip: content-box;
+		text-align: center;
+	}
+
+	&__wrap {
+		position: relative;
+		margin: 30px 0 10px;
+	}
+
+	&__search {
+		right: 100px;
+		top: 0;
+		position: absolute;
 	}
 }
