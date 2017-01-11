@@ -1,5 +1,13 @@
 html {
-	font-size: 10px;
+	font-size: 6px;
+
+	@media (min-width: $screen-md) {
+		font-size: 7px;
+	}
+
+	@media (min-width: $screen-lg) {
+		font-size: 8px;
+	}
 }
 
 body {

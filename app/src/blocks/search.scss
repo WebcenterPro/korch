@@ -9,13 +9,23 @@
 		right: 0;
 		bottom: 0;
 		width: 50px;
+		height: 27px;
+
+		@media (min-width: $screen-xs) {
+			height: auto;
+		}
 	}
 
 	&__input {
-		border: none;
-		font-size: 1.8rem;
-		color: $color-light;
-		padding: 8px 50px 7px 20px;
+		display: none;
+
+		@media (min-width: $screen-xs) {
+			display: inline-block;
+			border: none;
+			font-size: 1.8rem;
+			color: $color-light;
+			padding: 8px 50px 7px 20px;
+		}
 
 		&::-webkit-input-placeholder {
 			color: $color-light;

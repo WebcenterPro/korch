@@ -1,21 +1,41 @@
 .menu {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-	justify-content: space-between;
+	display: none;
+
+	@media (min-width: $screen-sm) {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		display: flex;
+		justify-content: space-between;
+	}
 
 	&__link {
 		color: $color-main;
 		text-transform: uppercase;
 		font-size: 2.4rem;
 		font-weight: 600;
-		line-height: 2.8em;
+		line-height: 3.2em;
 		display: inline-block;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			text-decoration: none;
 			color: $color-main;
+		}
+
+		&_mark {
+			background: url('/img/mark.png') no-repeat 50% 50%;
+			background-size: contain;
+			width: 80px;
+
+			@media (min-width: $screen-md) {
+				width: 100px;
+			}
+
+			@media (min-width: $screen-lg) {
+				width: 118px;
+			}
 		}
 	}
 }
