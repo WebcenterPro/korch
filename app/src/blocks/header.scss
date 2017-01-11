@@ -1,0 +1,14 @@
+.header {
+
+	&__top {
+		height: 61px;
+		background: white url('/img/header.png') no-repeat 50% 0;
+	}
+
+	&__main {
+		height: 220px;
+		padding-top: 61px;
+		background: url('/img/header.png') no-repeat 50% 0;
+		background-clip: content-box;
+	}
+}

@@ -1,0 +1,56 @@
+.top {
+	width: 100%;
+	position: fixed;
+	border-bottom: 1px solid $color-lighter;
+	font-size: 1.8rem;
+
+	&__left {
+		float: left;
+		margin-left: 100px;
+		height: 100%;
+	}
+
+	&__right {
+		float: right;
+		margin-right: 100px;
+	}
+
+	&__item {
+		color: $color-main;
+		text-decoration: none;
+		font-weight: 600;
+		line-height: 60px;
+		display: inline-block;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: $color-main;
+		}
+
+		&_phone {
+			font-size: 2rem;
+		}
+
+		&_reg {
+			margin-right: 70px;
+		}
+
+		&_bag {
+			position: relative;
+			padding-left: 37px;
+
+			&::before {
+				content: '';
+				display: block;
+				background-image: url('/img/bag.png');
+				width: 27px;
+				height: 27px;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				margin-top: -16px;
+			}
+		}
+	}
+}
