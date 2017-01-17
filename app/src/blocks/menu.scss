@@ -16,9 +16,16 @@
 		&:hover,
 		&:focus {
 
-			.menu__sub {
-				visibility: visible;
-				opacity: 1;
+			.menu {
+
+				&__sub {
+					visibility: visible;
+					opacity: 1;
+				}
+
+				&__link {
+					color: $color-light;
+				}
 			}
 		}
 	}
@@ -30,12 +37,8 @@
 		font-weight: 600;
 		line-height: 3.2em;
 		display: inline-block;
-
-		&:hover,
-		&:focus {
-			text-decoration: none;
-			color: $color-main;
-		}
+		text-decoration: none;
+		transition: .3s ease all .15s;
 
 		&_mark {
 			background: url('/img/mark.png') no-repeat 50% 50%;
@@ -85,6 +88,7 @@
 		line-height: 2em;
 		padding: 0 25px;
 		transition: .2s ease-out background;
+		text-decoration: none;
 
 		@media (min-width: $screen-md) {
 			font-size: 1.4rem;
@@ -93,7 +97,6 @@
 		&:hover,
 		&:focus {
 			color: $color-light;
-			text-decoration: none;
 			background-color: $color-lighter;
 		}
 	}

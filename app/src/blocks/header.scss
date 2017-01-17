@@ -2,12 +2,12 @@
 
 	&__top {
 		height: $top-height;
-		background: white url('/img/header.png') no-repeat 50% 0;
+		background: url('/img/bg.jpg') no-repeat 50% -330px;
 	}
 
 	&__main {
 		padding-top: $top-height;
-		background: url('/img/header.png') no-repeat 50% 0;
+		background: url('/img/bg.jpg') no-repeat 50% -330px;
 		background-clip: content-box;
 
 		@media (min-width: $screen-sm) {

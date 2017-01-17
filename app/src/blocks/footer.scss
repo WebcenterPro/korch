@@ -1,0 +1,61 @@
+.footer {
+	flex: 0 0 auto;
+	background:  url('/img/bg.jpg') no-repeat 50% 0;
+	padding: 50px 0 15px;
+	color: $color-footer;
+
+	&__row {
+		margin-bottom: 40px;
+		text-align: center;
+
+		@media (min-width: $screen-sm) {
+			text-align: left;
+		}
+	}
+
+	&__logo {
+		margin-bottom: 30px;
+
+		@media (min-width: $screen-sm) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__phone {
+		text-align: center;
+		margin: 15px 0 0;
+
+		@media (min-width: $screen-md) {
+			text-align: right;
+			margin: 0;
+		}
+	}
+
+	&__phone-link {
+		color: $color-footer;
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	&__copyright-link {
+		color: $color-footer;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			border-bottom: 1px dashed $color-light;
+		}
+	}
+
+	&__rights {
+		text-align: left;
+
+		@media (min-width: $screen-sm) {
+			text-align: right;
+		}
+
+		@media (min-width: $screen-md) {
+			text-align: center;
+		}
+	}
+}

@@ -1,4 +1,5 @@
 html {
+	height: 100%;
 	font-size: 6px;
 
 	@media (min-width: $screen-md) {
@@ -12,7 +13,10 @@ html {
 
 body {
 	font-family: $font-main;
-	font-size: 1.6rem;
+	font-size: 2rem;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 input {
@@ -22,5 +26,17 @@ input {
 	&:hover,
 	&:focus {
 		outline: none;
+	}
+}
+
+a {
+	transition: .2s ease all;
+	color: $color-main;
+	text-decoration: underline;
+
+	&:hover,
+	&:focus {
+		color: $color-light;
+		text-decoration: none;
 	}
 }

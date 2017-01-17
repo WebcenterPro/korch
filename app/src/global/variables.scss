@@ -57,3 +57,10 @@ $side-lg: 100px;
 		}
 	}
 }
+
+%clear {
+	content: '';
+	display: table;
+	width: 100%;
+	clear: both;
+}

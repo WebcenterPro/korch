@@ -2,12 +2,15 @@
 @import url('global/global.scss');
 @import url('global/fonts.scss');
 
+@import url('blocks/aside/aside.scss');
+
+@import url('blocks/wrapper.scss');
 @import url('blocks/header.scss');
 @import url('blocks/top.scss');
 @import url('blocks/main.scss');
-@import url('blocks/footer.scss');
 @import url('blocks/search.scss');
 @import url('blocks/logo.scss');
 @import url('blocks/menu.scss');
 @import url('blocks/toggle.scss');
-@import url('blocks/aside/aside.scss');
+@import url('blocks/f-menu.scss');
+@import url('blocks/footer.scss');
