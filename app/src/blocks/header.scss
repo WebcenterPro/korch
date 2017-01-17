@@ -45,4 +45,10 @@
 		position: absolute;
 		@include header-sides(right);
 	}
+
+	&__toggle {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
 }
