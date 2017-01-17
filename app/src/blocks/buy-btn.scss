@@ -1,0 +1,36 @@
+.buy-btn {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 4rem;
+	line-height: 1em;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: white;
+	background-color: $color-button;
+	padding: .3em 1.8em .3em .6em;
+	position: relative;
+	transition: .3s ease;
+
+	&::after {
+		content: '';
+		width: .63em;
+		height: 1em;
+		background: url('/img/btn-triangle.png') no-repeat;
+		background-size: contain;
+		display: inline-block;
+		position: absolute;
+		right: 6%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&:hover,
+	&:focus {
+		background-color: lighten($color-button, 5%);
+		color: white;
+	}
+
+	&:active {
+		background-color: darken($color-button, 15%);
+	}
+}
