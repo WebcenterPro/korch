@@ -2,51 +2,50 @@ $(document).ready(function(){
 	var $aside = $('.js-aside'); // Боковое меню
 	var $toggle = $('.js-aside_toggle'); // Гамбургер для бокового меню
 
-	/*var arrMenu = [
-		{
-			title: 'All Categories',
-			icon: ' fa fa-reorder aside__toggle',
-			items: [
-				{
-					name: 'Devices',
-					link: '#',
-					items: [{
-						title: 'Devices',
-						icon: ' fa fa-laptop',
-						items: [
-							{
-								name: 'Mobile Phones',
-								link: '#'
-							},
-							{
-								name: 'Televisions',
-								link: '#'
-							},
-							{
-								name: 'Cameras',
-								link: '#'
-							}
-						]
-					}]
-				},
-				{
-					name: 'Magazines',
-					link: '#'
-				},
-				{
-					name: 'Collections',
-					link: '#'
-				},
-				{
-					name: 'Credits',
-					link: '#'
-				}
-			]
+	
+	// Формирование мобильного меню на основе десктопного
+	var arr = [{ // Исходный массив
+		title: 'All Categories',
+		icon: ' fa fa-reorder aside__toggle',
+		items: []
+	}];
+
+	var 
+		$arrMain = arr[0].items, // Обращение к свойству items исходного массива
+		$arrLink, // Текущий тег A в меню
+		$arrSubLink, // Текущий тег A в подменю
+		$arrId; // Последний элемент массива
+
+	$('.menu__item').each(function() { // Перебираем все пункты меню
+		$arrLink = $(this).find('.menu__link'); // Забиваем ссылку текущего пункта
+		
+		$arrMain.push({ // Добавляем в массив объект со значениями ссылки
+			name: $arrLink.text(),
+			link: $arrLink.attr('href')
+		});
+
+		$arrSubLink = $(this).find('.menu__sub-link'); // Записываем все ссылки текущего пункта подменю
+
+		if ($arrSubLink.length) { // Если там не пусто
+			$arrId = $arrMain.length - 1; // То забиваем индекс последнего элемента
+			$arrMain[$arrId].items = [{ // И пишем в него исходник для подменю
+				title: $arrMain[$arrId].name,
+				items: []
+			}];
+
+			$arrSubLink.each(function(i) { // С каждой ссылки подменю
+				$arrMain[$arrId].items[0].items.push({ // Забиваем данные в массив
+					name: $($arrSubLink[i]).text(),
+					link: $($arrSubLink[i]).attr('href')
+				});
+			});
 		}
-	];*/
+	});
+	// ==================================================
+
 
 	$aside.multilevelpushmenu({ // Инициализация бокового меню
-		//menu: arrMenu,
+		menu: arr,
 		collapsed: true,
 		fullCollapse: true,
 		menuHeight: '100%',
