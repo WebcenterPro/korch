@@ -67,6 +67,7 @@
 		visibility: hidden;
 		opacity: 0;
 		transition: .3s ease all .15s;
+		z-index: 5;
 
 		&::before {
 			content: '';
