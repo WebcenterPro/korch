@@ -44,14 +44,31 @@
 	}
 
 	&__title {
-		font-weight: 700;
-		margin: 0;
-	}
-
-	&__descr {
 		margin: 0 0 5px;
-		height: 6em;
-		overflow: hidden;
+
+		@media (min-width: $screen-sm) {
+			height: 7.3em;
+			overflow: hidden;
+			position: relative;
+		}
+
+		&::first-line {
+			font-weight: 700;
+		}
+
+		&::after {
+
+			@media (min-width: $screen-sm) {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 5em;
+				height: 1.7em;
+				background: linear-gradient(to right, transparent, white);
+			}
+		}
 	}
 
 	&__price {
