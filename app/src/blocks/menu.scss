@@ -24,7 +24,7 @@
 				}
 
 				&__link {
-					color: $color-light;
+					@extend a:hover;
 				}
 			}
 		}
@@ -98,7 +98,6 @@
 
 		&:hover,
 		&:focus {
-			color: $color-light;
 			background-color: $color-lighter;
 		}
 	}

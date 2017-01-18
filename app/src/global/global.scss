@@ -37,7 +37,7 @@ a {
 
 	&:hover,
 	&:focus {
-		color: $color-light;
+		color: darken($color-light, 20%);
 		text-decoration: none;
 	}
 }

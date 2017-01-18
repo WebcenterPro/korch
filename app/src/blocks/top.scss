@@ -23,11 +23,6 @@
 		line-height: $top-height - 1;
 		display: inline-block;
 
-		&:hover,
-		&:focus {
-			color: $color-light;
-		}
-
 		&_phone {
 			font-size: 2rem;
 		}
@@ -58,6 +53,15 @@
 				top: 50%;
 				left: 0;
 				margin-top: -16px;
+				transition: .2s ease all;
+			}
+
+			&:hover,
+			&:focus {
+
+				&::before {
+					@include bgi-retina('/img/bag-hover');
+				}
 			}
 		}
 	}

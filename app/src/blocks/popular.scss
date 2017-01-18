@@ -6,6 +6,7 @@
 
 	&:hover,
 	&:focus {
+		color: lighten($color-main, 10%);
 
 		.popular {
 

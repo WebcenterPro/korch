@@ -1,12 +1,20 @@
 .adv {
 	text-align: center;
-	padding: 3em 0;
+	padding: 1.5em 0;
+
+	@media (min-width: $screen-xs) {
+		padding: 3em 0;
+	}
 
 	&__img {
 		width: 100px;
 		height: 100px;
 		background: no-repeat 50% 50%;
-		margin: 0 auto 3em;
+		margin: 0 auto 1em;
+
+		@media (min-width: $screen-xs) {
+			margin: 0 auto 3em;
+		}
 
 		&_1 {
 			@include bgi-retina('/img/advanced-1', 'png', 76px, 91px);
