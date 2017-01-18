@@ -9,19 +9,19 @@
 		margin: 0 auto 3em;
 
 		&_1 {
-			background-image: url('/img/advanced-1.png');
+			@include bgi-retina('/img/advanced-1', 'png', 76px, 91px);
 		}
 
 		&_2 {
-			background-image: url('/img/advanced-2.png');
+			@include bgi-retina('/img/advanced-2', 'png', 89px, 91px);
 		}
 
 		&_3 {
-			background-image: url('/img/advanced-3.png');
+			@include bgi-retina('/img/advanced-3', 'png', 88px, 91px);
 		}
 
 		&_4 {
-			background-image: url('/img/advanced-4.png');
+			@include bgi-retina('/img/advanced-4', 'png', 97px, 91px);
 		}
 	}
 

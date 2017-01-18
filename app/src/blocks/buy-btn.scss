@@ -15,7 +15,8 @@
 		content: '';
 		width: .63em;
 		height: 1em;
-		background: url('/img/btn-triangle.png') no-repeat;
+		background: no-repeat;
+		@include bgi-retina('/img/btn-triangle', 'png', contain);
 		background-size: contain;
 		display: inline-block;
 		position: absolute;

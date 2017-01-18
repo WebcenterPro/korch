@@ -51,7 +51,7 @@
 			&::before {
 				content: '';
 				display: block;
-				background-image: url('/img/bag.png');
+				@include bgi-retina('/img/bag');
 				width: 27px;
 				height: 27px;
 				position: absolute;

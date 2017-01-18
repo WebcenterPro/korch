@@ -79,11 +79,11 @@
 
 	.owl-prev {
 		left: 0;
-		background-image: url('/img/left.jpg');
+		@include bgi-retina('/img/left', 'jpg');
 	}
 
 	.owl-next {
 		right: 0;
-		background-image: url('/img/right.jpg');
+		@include bgi-retina('/img/right', 'jpg');
 	}
 }

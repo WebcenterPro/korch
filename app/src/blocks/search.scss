@@ -2,7 +2,8 @@
 	display: inline-block;
 
 	&__btn {
-		background: url('/img/search.png') no-repeat 50% 50%;
+		background: no-repeat 50% 50%;
+		@include bgi-retina('/img/search', 'png', 22px, 22px);
 		display: inline-block;
 		position: absolute;
 		top: 0;

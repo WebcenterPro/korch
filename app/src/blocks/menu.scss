@@ -41,7 +41,8 @@
 		transition: .3s ease all .15s;
 
 		&_mark {
-			background: url('/img/mark.png') no-repeat 50% 50%;
+			background: no-repeat 50% 50%;
+			@include bgi-retina('/img/mark', 'png', 100%, auto);
 			background-size: contain;
 			width: 80px;
 
