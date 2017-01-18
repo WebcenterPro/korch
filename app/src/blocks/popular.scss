@@ -1,5 +1,22 @@
 .popular {
-	text-align: center;
+	text-align: center;;
+	display: block;
+	text-decoration: none;
+	color: black;
+
+	&:hover,
+	&:focus {
+
+		.popular {
+
+			&__img {
+
+				@media (min-width: $screen-md) {
+					transform: scale(1.03);
+				}
+			}
+		}
+	}
 
 	&__img {
 		width: 90%;
@@ -8,6 +25,7 @@
 		background: no-repeat 50% 50%;
 		background-size: cover;
 		border-radius: 50%;
+		transition: .2s ease;
 
 		&_1 {
 			background-image: url('/img/popular-1.jpg');
