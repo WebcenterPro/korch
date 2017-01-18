@@ -1,0 +1,34 @@
+.adv {
+	text-align: center;
+	padding: 3em 0;
+
+	&__img {
+		width: 100px;
+		height: 100px;
+		background: no-repeat 50% 50%;
+		margin: 0 auto 3em;
+
+		&_1 {
+			background-image: url('/img/advanced-1.png');
+		}
+
+		&_2 {
+			background-image: url('/img/advanced-2.png');
+		}
+
+		&_3 {
+			background-image: url('/img/advanced-3.png');
+		}
+
+		&_4 {
+			background-image: url('/img/advanced-4.png');
+		}
+	}
+
+	&__title {
+		font-size: 2.2rem;
+		color: $color-dark;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}

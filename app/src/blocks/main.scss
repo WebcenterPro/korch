@@ -1,0 +1,19 @@
+.main {
+
+	&__section {
+		margin-bottom: 5em;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-size: 4rem;
+		color: $color-main;
+		font-weight: normal;
+		text-align: center;
+		margin: 0 0 2.5em;
+	}
+	
+	&__adv-wrap {
+		background: $color-lighter url('/img/adv-phone.jpg') 50% -40px;
+	}
+}

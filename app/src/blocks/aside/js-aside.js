@@ -1,17 +1,18 @@
-$(document).ready(function(){
-	var $aside = $('.js-aside'); // Боковое меню
-	var $toggle = $('.js-aside_toggle'); // Гамбургер для бокового меню
+$(function(){
+	var 
+		$aside = $('.js-aside'), // Боковое меню
+		$toggle = $('.js-aside_toggle'); // Гамбургер для бокового меню
 
 	
 	// Формирование мобильного меню на основе десктопного
-	var arr = [{ // Исходный массив
+	var $arr = [{ // Исходный массив
 		title: 'All Categories',
 		icon: ' fa fa-reorder aside__toggle',
 		items: []
 	}];
 
 	var 
-		$arrMain = arr[0].items, // Обращение к свойству items исходного массива
+		$arrMain = $arr[0].items, // Обращение к свойству items исходного массива
 		$arrLink, // Текущий тег A в меню
 		$arrSubLink, // Текущий тег A в подменю
 		$arrId; // Последний элемент массива
@@ -45,7 +46,7 @@ $(document).ready(function(){
 
 
 	$aside.multilevelpushmenu({ // Инициализация бокового меню
-		menu: arr,
+		menu: $arr,
 		collapsed: true,
 		fullCollapse: true,
 		menuHeight: '100%',
@@ -85,7 +86,7 @@ $(document).ready(function(){
 			if (window.innerWidth > '767') {
 				$aside.multilevelpushmenu('collapse'); // Скрывает меню при ресайзе с мобилы до планшета
 			} else {
-				$aside.multilevelpushmenu('redraw'); // Корректное отображение при ресайзе
+				$aside.multilevelpushmenu('redraw'); // Иначе корректно отображает при ресайзе
 			}
 		}
 	});

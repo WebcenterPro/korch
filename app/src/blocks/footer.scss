@@ -39,6 +39,7 @@
 
 	&__copyright-link {
 		color: $color-footer;
+		border-bottom: 1px dashed transparent;
 		text-decoration: none;
 
 		&:hover,
