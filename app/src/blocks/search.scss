@@ -1,5 +1,15 @@
 .search {
 	display: inline-block;
+	transition: .3s ease;
+	outline: 1px solid transparent;
+
+	&:hover {
+
+		@media (min-width: $screen-xs) {
+			outline: 1px solid $color-light;
+			outline-offset: 0;
+		}
+	}
 
 	&__btn {
 		background: no-repeat 50% 50%;
@@ -15,6 +25,21 @@
 		@media (min-width: $screen-xs) {
 			height: auto;
 		}
+
+		&:hover,
+		&:focus {
+
+			@media (min-width: $screen-xs) {
+				background-color: $color-lighter;
+			}
+		}
+
+		&:active {
+
+			@media (min-width: $screen-xs) {
+				background-color: $color-light;
+			}
+		}
 	}
 
 	&__input {
@@ -26,6 +51,8 @@
 			font-size: 1.8rem;
 			padding: 8px 50px 7px 20px;
 			color: $color-light;
+			outline: 1px solid transparent;
+			outline-offset: 0;
 		}
 
 		&::-webkit-input-placeholder {
@@ -45,7 +72,11 @@
 		}
 
 		&:focus {
-			outline: none;
+
+			@media (min-width: $screen-xs) {
+				outline: 1px solid $color-light;
+				outline-offset: 0;
+			}
 
 			&::-webkit-input-placeholder {
 				opacity: 0;

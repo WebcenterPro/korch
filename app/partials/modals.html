@@ -1,0 +1,61 @@
+<!-- SIGN IN -->
+<div class="modal fade sign js-sign">
+	<div class="modal-dialog sign__outer">
+
+		<div class="sign__wrap sign__wrap_in sign__wrap_visible">
+
+			<div class="sign__header">
+				<div class="sign__close" data-dismiss="modal"></div>
+				<p class="sign__descr">Don`t have account? <a class="sign__link js-sign__link_up" href="#">Create account</a></p>
+			</div>
+
+			<div class="sign__body">
+				<form class="form sign__form" action="/">
+					<input class="input input_wide form__input" type="email" placeholder="E-mail" required>
+					<input class="input input_wide form__input" type="password" placeholder="Password" required>
+					<input class="button button_wide" type="submit" value="Sign in">
+				</form>
+				<p class="sign__descr"><a class="sign__link js-sign__link_forgot" href="#">Forgot your password?</a></p>
+			</div>
+		</div>
+
+		<div class="sign__wrap sign__wrap_up">
+
+			<div class="sign__header">
+				<div class="sign__close" data-dismiss="modal"></div>
+				<p class="sign__descr">Do already have account? <a class="sign__link js-sign__link_in" href="#">Sign in</a></p>
+			</div>
+
+			<div class="sign__body">
+				<form class="form sign__form">
+					<input class="input input_wide form__input" type="text" placeholder="Name" required>
+					<input class="input input_wide form__input" type="email" placeholder="E-mail" required>
+					<input class="input input_wide form__input" type="password" placeholder="Password" required>
+					<input class="input input_wide form__input" type="password" placeholder="Confirm password" required>
+					<input class="button button_wide" type="submit" value="Sign up">
+				</form>
+			</div>
+		</div>
+
+		<div class="sign__wrap sign__wrap_forgot">
+
+			<div class="sign__header">
+				<div class="sign__close" data-dismiss="modal"></div>
+				<p class="sign__descr">Forgot your password? Enter your login or E-mail.</p>
+			</div>
+
+			<div class="sign__body">
+				<form class="form sign__form js-sign__form_forgot" action="/">
+					<input class="input input_wide form__input" type="text" placeholder="Login">
+					<p class="sign__or">or</p>
+					<input class="input input_wide form__input" type="email" placeholder="E-mail">
+					<input class="button button_wide" type="submit" value="Send">
+				</form>
+				<p class="sign__descr text-center">
+					<a class="sign__link js-sign__link_in" href="#">Sign in</a> |
+					<a class="sign__link js-sign__link_up" href="#">Sign up</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

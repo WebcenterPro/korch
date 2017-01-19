@@ -1,14 +1,42 @@
-.sign-in {
+.sign {
+
+	&__outer {
+		margin: 0;
+		width: auto;
+
+		@media (min-width: $screen-xs) {
+			margin: 30px auto;
+			width: 350px;
+		}
+
+		@media (min-width: $screen-sm) {
+			width: 400px;
+		}
+
+		@media (min-width: $screen-md) {
+			width: 450px;
+		}
+
+		@media (min-width: $screen-lg) {
+			width: 500px;
+		}
+	}
 
 	&__wrap {
 		background-color: $color-lightest;
 		box-shadow: 1px 1px 10px #444;
+
+		&_up,
+		&_forgot {
+			display: none;
+		}
 	}
 
 	&__header {
-		padding: 0 2em;
+		padding: 0 4em 0 2em;
 		border-bottom: 1px solid $color-lighter;
 		position: relative;
+		overflow: auto;
 
 		@media (min-width: $screen-xs) {
 			padding: 0 4.5em;
@@ -24,10 +52,20 @@
 	}
 
 	&__descr {
-		padding: 1.6em 0 1.3em;
-		margin: 0;
+		margin: 1.6em 0 1.3em;
 		color: $color-main;
 		font-size: 1.9rem;
+	}
+
+	&__or {
+		font-size: 1.8rem;
+		margin: -1em 0 1.5em 0;
+		line-height: 1em;
+		text-align: center;
+	}
+
+	&__form {
+		margin-bottom: 1.3em;
 	}
 
 	&__close {

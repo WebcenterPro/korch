@@ -108,11 +108,11 @@
 	// Фон
 	&__i {
 		transition: background .3s ease;
-		background-color: $color-light;
+		background-color: lighten($color-light, 5%);
 
 		// Фон неактивной панели
 		&_inactive {
-			background: darken($color-light, 20%);
+			background: darken($color-light, 15%);
 		}
 
 		// Тень подменю

@@ -1,22 +1,26 @@
 $(function(){
 	var 
 		$aside = $('.js-aside'), // Боковое меню
-		$toggle = $('.js-aside_toggle'); // Гамбургер для бокового меню
-
+		$toggle = $('.js-aside_toggle') // Гамбургер для бокового меню
+	;
+	
 	
 	// Формирование мобильного меню на основе десктопного
-	var $arr = [{ // Исходный массив
-		title: 'All Categories',
-		icon: ' fa fa-reorder aside__toggle',
-		items: []
-	}];
+	var
+		$arr = [{ // Исходный массив
+			title: 'All Categories',
+			icon: ' fa fa-reorder aside__toggle',
+			items: []
+		}]
+	;
 
 	var 
 		$arrMain = $arr[0].items, // Обращение к свойству items исходного массива
 		$arrLink, // Текущий тег A в меню
 		$arrSubLink, // Текущий тег A в подменю
-		$arrId; // Последний элемент массива
-
+		$arrId // Последний элемент массива
+	;
+	
 	$('.menu__item').each(function() { // Перебираем все пункты меню
 		$arrLink = $(this).find('.menu__link'); // Забиваем ссылку текущего пункта
 		

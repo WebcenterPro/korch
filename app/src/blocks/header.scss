@@ -53,12 +53,17 @@
 	}
 
 	&__bottom {
-		border-bottom: 1px solid $color-lighter;
 		margin: 0;
-		font-size: 1.7rem;
-		font-weight: 600;
-		text-align: center;
-		line-height: 2.5em;
-		color: $color-main;
+		border-bottom: 1px solid $color-lighter;
+		overflow: hidden;
+		line-height: 0;
+
+		@media (min-width: $screen-sm) {
+			font-size: 1.7rem;
+			font-weight: 600;
+			text-align: center;
+			color: $color-main;
+			line-height: 2.5em;
+		}
 	}
 }
