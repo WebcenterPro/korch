@@ -50,25 +50,9 @@
 			border: none;
 			font-size: 1.8rem;
 			padding: 8px 50px 7px 20px;
-			color: $color-light;
 			outline: 1px solid transparent;
 			outline-offset: 0;
-		}
-
-		&::-webkit-input-placeholder {
-			color: $color-light;
-		}
-
-		&::-moz-placeholder {
-			color: $color-light;
-		}
-
-		&:-moz-placeholder {
-			color: $color-light;
-		}
-
-		&:-ms-input-placeholder {
-			color: $color-light;
+			color: $color-main;
 		}
 
 		&:focus {
@@ -76,26 +60,6 @@
 			@media (min-width: $screen-xs) {
 				outline: 1px solid $color-light;
 				outline-offset: 0;
-			}
-
-			&::-webkit-input-placeholder {
-				opacity: 0;
-				text-indent: 200px;
-			}
-
-			&::-moz-placeholder {
-				opacity: 0;
-				text-indent: 200px;
-			}
-
-			&:-moz-placeholder {
-				opacity: 0;
-				text-indent: 200px;
-			}
-
-			&:-ms-input-placeholder {
-				opacity: 0;
-				text-indent: 200px;
 			}
 		}
 	}

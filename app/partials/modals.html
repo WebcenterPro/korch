@@ -11,8 +11,21 @@
 
 			<div class="sign__body">
 				<form class="form sign__form" action="/">
-					<input class="input input_wide form__input" type="email" placeholder="E-mail" required>
-					<input class="input input_wide form__input" type="password" placeholder="Password" required>
+
+					<span class="input input_wide form__input">
+						<input class="input__field" type="email" required>
+						<label class="input__label">
+							<span class="input__label-content" data-content="E-mail">E-mail</span>
+						</label>
+					</span>
+
+					<span class="input input_wide form__input">
+						<input class="input__field" type="password" required>
+						<label class="input__label">
+							<span class="input__label-content" data-content="Password">Password</span>
+						</label>
+					</span>
+
 					<input class="button button_wide" type="submit" value="Sign in">
 				</form>
 				<p class="sign__descr"><a class="sign__link js-sign__link_forgot" href="#">Forgot your password?</a></p>
@@ -28,10 +41,35 @@
 
 			<div class="sign__body">
 				<form class="form sign__form">
-					<input class="input input_wide form__input" type="text" placeholder="Name" required>
-					<input class="input input_wide form__input" type="email" placeholder="E-mail" required>
-					<input class="input input_wide form__input" type="password" placeholder="Password" required>
-					<input class="input input_wide form__input" type="password" placeholder="Confirm password" required>
+
+					<span class="input input_wide form__input">
+						<input class="input__field" type="text" required>
+						<label class="input__label">
+							<span class="input__label-content" data-content="Name">Name</span>
+						</label>
+					</span>
+
+					<span class="input input_wide form__input">
+						<input class="input__field" type="email" required>
+						<label class="input__label">
+							<span class="input__label-content" data-content="E-mail">E-mail</span>
+						</label>
+					</span>
+
+					<span class="input input_wide form__input">
+						<input class="input__field" type="password" required>
+						<label class="input__label">
+							<span class="input__label-content" data-content="Password">Password</span>
+						</label>
+					</span>
+
+					<span class="input input_wide form__input">
+						<input class="input__field" type="password" required>
+						<label class="input__label">
+							<span class="input__label-content" data-content="Confirm password">Confirm password</span>
+						</label>
+					</span>
+
 					<input class="button button_wide" type="submit" value="Sign up">
 				</form>
 			</div>
@@ -46,9 +84,23 @@
 
 			<div class="sign__body">
 				<form class="form sign__form js-sign__form_forgot" action="/">
-					<input class="input input_wide form__input" type="text" placeholder="Login">
+
+					<span class="input input_wide form__input">
+						<input class="input__field" type="text">
+						<label class="input__label">
+							<span class="input__label-content" data-content="Login">Login</span>
+						</label>
+					</span>
+
 					<p class="sign__or">or</p>
-					<input class="input input_wide form__input" type="email" placeholder="E-mail">
+
+					<span class="input input_wide form__input">
+						<input class="input__field" type="email">
+						<label class="input__label">
+							<span class="input__label-content" data-content="E-mail">E-mail</span>
+						</label>
+					</span>
+
 					<input class="button button_wide" type="submit" value="Send">
 				</form>
 				<p class="sign__descr text-center">

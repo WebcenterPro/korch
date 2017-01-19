@@ -12,17 +12,24 @@ $(function() {
 
 		signDelay = 300, // Скорость смены контейнеров
 
-		formForgot = sign.find('.js-sign__form_forgot') // Форма для забытого пароля
+		formForgot = sign.find('.js-sign__form_forgot'), // Форма для забытого пароля
+
+		$inputFillClass = 'input__field_fill' // Класс заполненного инпута
 	;
 
 	sign.on('shown.bs.modal', function() { // Фокус при открытии модалки
 		$(this).find('input:first').focus();
 	});
 
-	sign.on('hidden.bs.modal', function() { // При закрытии модалки возвращается контейнер входа
+	sign.on('hidden.bs.modal', function() { // При закрытии модалки возвращается контейнер входа и очищаются инпуты
 		signIn.slideDown();
 		signUp.slideUp();
 		signForgot.slideUp();
+
+		$(this)
+			.find('input')
+			.val('')
+			.removeClass($inputFillClass);
 	});
 
 	// Смена контейнеров при клике на ссылки
