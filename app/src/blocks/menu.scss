@@ -92,10 +92,6 @@
 		transition: .2s ease-out background;
 		text-decoration: none;
 
-		@media (min-width: $screen-md) {
-			font-size: 1.4rem;
-		}
-
 		&:hover,
 		&:focus {
 			background-color: $color-lighter;

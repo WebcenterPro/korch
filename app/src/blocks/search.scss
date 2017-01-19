@@ -24,62 +24,47 @@
 			display: inline-block;
 			border: none;
 			font-size: 1.8rem;
-			color: $color-light;
 			padding: 8px 50px 7px 20px;
+			color: $color-light;
 		}
 
 		&::-webkit-input-placeholder {
 			color: $color-light;
-			font-size: 1.8rem;
-			text-indent: 0;
-			transition: .3s ease all;
-			font-weight: 300;
 		}
 
 		&::-moz-placeholder {
 			color: $color-light;
-			font-size: 1.8rem;
-			text-indent: 0;
-			transition: .3s ease all;
-			font-weight: 300;
 		}
 
 		&:-moz-placeholder {
 			color: $color-light;
-			font-size: 1.8rem;
-			text-indent: 0;
-			transition: .3s ease all;
-			font-weight: 300;
 		}
 
 		&:-ms-input-placeholder {
 			color: $color-light;
-			font-size: 1.8rem;
-			text-indent: 0;
-			transition: .3s ease all;
-			font-weight: 300;
 		}
 
 		&:focus {
+			outline: none;
 
 			&::-webkit-input-placeholder {
-				text-indent: 200px;
 				opacity: 0;
+				text-indent: 200px;
 			}
 
 			&::-moz-placeholder {
-				text-indent: 200px;
 				opacity: 0;
+				text-indent: 200px;
 			}
 
 			&:-moz-placeholder {
-				text-indent: 200px;
 				opacity: 0;
+				text-indent: 200px;
 			}
 
 			&:-ms-input-placeholder {
-				text-indent: 200px;
 				opacity: 0;
+				text-indent: 200px;
 			}
 		}
 	}

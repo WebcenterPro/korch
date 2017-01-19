@@ -33,6 +33,13 @@
 			@media (min-width: $screen-xs) {
 				margin-right: 5em;
 			}
+
+			&:focus {
+
+				@media (min-width: $screen-sm) {
+					color: $color-main;
+				}
+			}
 		}
 
 		&_bag {

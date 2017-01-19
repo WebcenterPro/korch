@@ -20,12 +20,68 @@ body {
 	flex-direction: column;
 }
 
+::selection {
+	background-color: $color-light;
+}
+
 input {
 	-webkit-appearance: none;
 	border-radius: 0;
+	transition: .3s ease;
 
-	&:hover,
+	&::-webkit-input-placeholder {
+		color: $color-gray;
+		font-size: 1.8rem;
+		text-indent: 0;
+		transition: .3s ease all;
+		font-weight: 300;
+	}
+
+	&::-moz-placeholder {
+		color: $color-gray;
+		font-size: 1.8rem;
+		text-indent: 0;
+		transition: .3s ease all;
+		font-weight: 300;
+	}
+
+	&:-moz-placeholder {
+		color: $color-gray;
+		font-size: 1.8rem;
+		text-indent: 0;
+		transition: .3s ease all;
+		font-weight: 300;
+	}
+
+	&:-ms-input-placeholder {
+		color: $color-gray;
+		font-size: 1.8rem;
+		text-indent: 0;
+		transition: .3s ease all;
+		font-weight: 300;
+	}
+
 	&:focus {
+		outline: none;
+
+		&::-webkit-input-placeholder {
+			text-indent: 10%;
+		}
+
+		&::-moz-placeholder {
+			text-indent: 10%;
+		}
+
+		&:-moz-placeholder {
+			text-indent: 10%;
+		}
+
+		&:-ms-input-placeholder {
+			text-indent: 10%;
+		}
+	}
+
+	&:hover {
 		outline: none;
 	}
 }
@@ -37,7 +93,12 @@ a {
 
 	&:hover,
 	&:focus {
+		outline: none;
 		color: darken($color-light, 20%);
 		text-decoration: none;
+	}
+
+	&:active {
+		outline: none;
 	}
 }

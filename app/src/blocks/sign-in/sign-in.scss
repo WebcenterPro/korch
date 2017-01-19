@@ -1,0 +1,49 @@
+.sign-in {
+
+	&__wrap {
+		background-color: $color-lightest;
+		box-shadow: 1px 1px 10px #444;
+	}
+
+	&__header {
+		padding: 0 2em;
+		border-bottom: 1px solid $color-lighter;
+		position: relative;
+
+		@media (min-width: $screen-xs) {
+			padding: 0 4.5em;
+		}
+	}
+
+	&__body {
+		padding: 2em 2em .5em;
+
+		@media (min-width: $screen-xs) {
+			padding: 2.5em 4.5em;
+		}
+	}
+
+	&__descr {
+		padding: 1.6em 0 1.3em;
+		margin: 0;
+		color: $color-main;
+		font-size: 1.9rem;
+	}
+
+	&__close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 4em;
+		background: no-repeat 50%;
+		@include bgi-retina('/img/close', 'png', 28px);
+		cursor: pointer;
+		transition: .3s ease;
+
+		&:hover,
+		&:focus {
+			background-color: $color-lighter;
+		}
+	}
+}

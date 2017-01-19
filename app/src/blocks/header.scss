@@ -51,4 +51,14 @@
 		left: 0;
 		top: 0;
 	}
+
+	&__bottom {
+		border-bottom: 1px solid $color-lighter;
+		margin: 0;
+		font-size: 1.7rem;
+		font-weight: 600;
+		text-align: center;
+		line-height: 2.5em;
+		color: $color-main;
+	}
 }
