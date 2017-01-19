@@ -53,7 +53,8 @@
 			&::before {
 				content: '';
 				display: block;
-				@include bgi-retina('/img/bag');
+				@include bgi-retina('/img/bag', 'png', cover);
+				background-position: -27px 0px;
 				width: 27px;
 				height: 27px;
 				position: absolute;
@@ -61,13 +62,32 @@
 				left: 0;
 				margin-top: -16px;
 				transition: .2s ease all;
+				opacity: 1;
+			}
+
+			&::after {
+				content: '';
+				display: block;
+				@include bgi-retina('/img/bag', 'png', cover);
+				width: 27px;
+				height: 27px;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				margin-top: -16px;
+				transition: .2s ease all;
+				opacity: 0;
 			}
 
 			&:hover,
 			&:focus {
 
 				&::before {
-					@include bgi-retina('/img/bag-hover');
+					opacity: 0;
+				}
+
+				&::after {
+					opacity: 1;
 				}
 			}
 		}
