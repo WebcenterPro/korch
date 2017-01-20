@@ -29,7 +29,7 @@
 		&::after {
 			content: '';
 			display: block;
-			@include bgi-retina('/img/search', 'png', cover);
+			@include bgi-retina('../img/search', 'png', cover);
 			width: 22px;
 			height: 22px;
 			position: absolute;

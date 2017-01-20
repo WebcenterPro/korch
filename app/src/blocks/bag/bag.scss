@@ -10,7 +10,7 @@
 	&::after {
 		content: '';
 		display: block;
-		@include bgi-retina('/img/bag', 'png', cover);
+		@include bgi-retina('../img/bag', 'png', cover);
 		width: 27px;
 		height: 27px;
 		position: absolute;

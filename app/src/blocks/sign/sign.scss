@@ -75,7 +75,7 @@
 		bottom: 0;
 		width: 4em;
 		background: no-repeat 50%;
-		@include bgi-retina('/img/close', 'png', 28px);
+		@include bgi-retina('../img/close', 'png', 28px);
 		cursor: pointer;
 		transition: .3s ease;
 

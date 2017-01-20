@@ -81,7 +81,7 @@
 				content: '';
 				border: 0;
 				display: block;
-				@include bgi-retina('/img/mark', 'png', cover);
+				@include bgi-retina('../img/mark', 'png', cover);
 				background-size: cover;
 				width: 100%;
 				max-width: 100%;

@@ -9,7 +9,7 @@
 
 
 		&_img-1 {
-			background-image: url('/img/slide-1.jpg');
+			background-image: url('../img/slide-1.jpg');
 		}
 	}
 
@@ -79,11 +79,11 @@
 
 	.owl-prev {
 		left: 0;
-		@include bgi-retina('/img/left', 'jpg');
+		@include bgi-retina('../img/left', 'jpg');
 	}
 
 	.owl-next {
 		right: 0;
-		@include bgi-retina('/img/right', 'jpg');
+		@include bgi-retina('../img/right', 'jpg');
 	}
 }
