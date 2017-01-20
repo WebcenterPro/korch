@@ -14,6 +14,7 @@ $(function() {
 
 		formForgot = sign.find('.js-sign__form_forgot'), // Форма для забытого пароля
 
+		$input = 'input__field', // Класс инпута
 		$inputFillClass = 'input__field_fill' // Класс заполненного инпута
 	;
 
@@ -27,7 +28,7 @@ $(function() {
 		signForgot.slideUp();
 
 		$(this)
-			.find('input')
+			.find($input)
 			.val('')
 			.removeClass($inputFillClass);
 	});
@@ -63,14 +64,20 @@ $(function() {
 	
 	formForgot.on('submit', function() { // Проверка на заполненность любого поля в восст. пароля
 		var bool = false;
+
 		$(this)
-			.find('.form__input')
+			.find('.' + $input)
 			.each(function() {
 				if ($(this).val()) {
 					bool = true;
 				}
 			});
 
-		if (!bool) return false;
+		if (!bool) {
+			$(this)
+				.find('.' + $input)[0]
+				.focus();
+			return false;
+		}
 	});
 });

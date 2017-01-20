@@ -67,7 +67,7 @@ $side-lg: 100px;
 	only screen and (min-resolution: 144dpi) {
 		background-image: url($file + '@2x.' + $type);
 
-		@if $width == cover {
+		@if $width == cover or $width == contain {
 			$height: null;
 		}
 

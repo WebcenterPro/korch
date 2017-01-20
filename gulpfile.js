@@ -1,22 +1,24 @@
 /* ===== ПОДКЛЮЧЕНИЕ ПЛАГИНОВ ===== */
-var gulp         = require('gulp'),                         // GULP
-    sass         = require('gulp-sass'),                    // Препроцессор Sass
-    browserSync  = require('browser-sync'),                 // Автоперезагрузка браузера
-    concat       = require('gulp-concat'),                  // Конкатенация (соединение) файлов
-    uglify       = require('gulp-uglifyjs'),                // Сжатие JS
-    rename       = require('gulp-rename'),                  // Для переименования файлов
-    del          = require('del'),                          // Для удаления файлов и папок
-    imagemin     = require('gulp-imagemin'),                // Для работы с изображениями
-    pngquant     = require('imagemin-pngquant'),            // Для работы с PNG
-    cache        = require('gulp-cache'),                   // Для кэширования
-    autoprefixer = require('gulp-autoprefixer'),            // Автоматическое добавление префиксов
-    include      = require('gulp-file-include'),            // Подключение файлов в другие файлы
-    queries      = require('gulp-group-css-media-queries'), // Объединение медиа запросов
-    sprite       = require('gulp.spritesmith'),             // Создание спрайтов
-    plumber      = require('gulp-plumber'),                 // Перехват ошибок
-    gutil        = require('gulp-util'),                    // Различные вспомогательные утилиты
-    cssImport    = require('gulp-cssimport'),               // Работа @import
-	 path         = require('path')                          // Для работы с путями
+var
+	gulp         = require('gulp'),                         // GULP
+   sass         = require('gulp-sass'),                    // Препроцессор Sass
+   browserSync  = require('browser-sync'),                 // Автоперезагрузка браузера
+   concat       = require('gulp-concat'),                  // Конкатенация (соединение) файлов
+   uglify       = require('gulp-uglifyjs'),                // Сжатие JS
+   rename       = require('gulp-rename'),                  // Для переименования файлов
+   del          = require('del'),                          // Для удаления файлов и папок
+   imagemin     = require('gulp-imagemin'),                // Для работы с изображениями
+   pngquant     = require('imagemin-pngquant'),            // Для работы с PNG
+   cache        = require('gulp-cache'),                   // Для кэширования
+   autoprefixer = require('gulp-autoprefixer'),            // Автоматическое добавление префиксов
+   include      = require('gulp-file-include'),            // Подключение файлов в другие файлы
+   queries      = require('gulp-group-css-media-queries'), // Объединение медиа запросов
+   sprite       = require('gulp.spritesmith'),             // Создание спрайтов
+   plumber      = require('gulp-plumber'),                 // Перехват ошибок
+   gutil        = require('gulp-util'),                    // Различные вспомогательные утилиты
+   cssImport    = require('gulp-cssimport'),               // Работа @import
+	path         = require('path'),                         // Для работы с путями
+	strip        = require('gulp-strip-css-comments')       // Убирает комментарии
 ;
 /* ================================ */
 
@@ -84,6 +86,9 @@ gulp.task('css-libs', function() {
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(cssImport()) // Запускаем @import
 		.pipe(sass({outputStyle: 'compressed'})) // Преобразуем SCSS в CSS
+		.pipe(strip({ // Убираем комментарии
+			preserve: false // /* */ - Такие тоже
+		}))
 		.pipe(rename({suffix: '.min'})) // Добавляем суффикс ".min"
 		.pipe(gulp.dest(dist + 'css')) // Выгружаем
 		.pipe(reload({stream: true})); //Перезагружаем сервер

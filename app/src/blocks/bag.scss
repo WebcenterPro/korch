@@ -1,0 +1,70 @@
+.bag {
+	position: relative;
+	padding-left: 27px;
+
+	@media (min-width: $screen-xs) {
+		padding-left: 37px;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		@include bgi-retina('/img/bag', 'png', cover);
+		width: 27px;
+		height: 27px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		margin-top: -16px;
+		transition: .2s ease all;
+	}
+
+	&::before {
+		background-position: -27px 0px;
+		opacity: 1;
+	}
+
+	&::after {
+		opacity: 0;
+	}
+
+	&:hover,
+	&:focus {
+
+		&::before {
+			opacity: 0;
+		}
+
+		&::after {
+			opacity: 1;
+		}
+	}
+
+	&__text {
+		display: none;
+
+		@media (min-width: $screen-xs) {
+			display: inline;
+		}
+	}
+
+	&__count {
+
+		@media (max-width: $screen-xs - 1) {
+			position: absolute;
+			top: -20px;
+			right: -7px;
+			line-height: 1.3em;
+			border: 2px solid $color-light;
+			border-radius: 50%;
+			background-color: $color-lighter;
+			display: inline-block;
+			width: 19px;
+			height: 19px;
+			text-align: center;
+			overflow: hidden;
+			z-index: 1;
+		}
+	}
+}
