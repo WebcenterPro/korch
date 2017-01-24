@@ -3,7 +3,7 @@ $(function() {
 		sign = $('.js-sign'), // Модальное окно входа / регистрации
 		
 		signIn = sign.find('.sign__wrap_in'), // Контейнер для входа
-		signUp = sign.find('.sign__wrap_up'), // Контейнер для регистраци
+		signUp = sign.find('.sign__wrap_up'), // Контейнер для регистрации
 		signForgot = sign.find('.sign__wrap_forgot'), // Контейнер для забытого пароля
 		
 		signLinkIn = sign.find('.js-sign__link_in'), // Ссылка на контейнер для входа
@@ -28,7 +28,7 @@ $(function() {
 		signForgot.slideUp();
 
 		$(this)
-			.find($input)
+			.find('.' + $input)
 			.val('')
 			.removeClass($inputFillClass);
 	});
