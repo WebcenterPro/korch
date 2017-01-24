@@ -1,0 +1,22 @@
+.bread {
+	background-color: transparent;
+	padding: 0;
+
+	&__item {
+		font-size: 2rem;
+		text-transform: uppercase;
+
+		&_active {
+			font-weight: 600;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+
+	}
+
+	> li + li:before { // Разделитель
+		color: $color-main;
+	}
+}

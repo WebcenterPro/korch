@@ -1,0 +1,63 @@
+.pag {
+
+	&__list {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+
+		&::after {
+			@extend %clear;
+		}
+	}
+
+	&__item {
+		display: inline-block;
+		float: left;
+	}
+
+	&__link {
+		font-size: 2rem;
+		display: inline-block;
+		padding: 6px 12px;
+		text-decoration: none;
+		border: none;
+		color: $color-main;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 20%;
+			right: 20%;
+			border-bottom: 2px solid transparent;
+			transition: .3s ease;
+		}
+
+
+		&:hover,
+		&:focus {
+			color: $color-main;
+
+			&::after {
+				border-color: $color-lighter;
+			}
+		}
+
+		&_active {
+
+			&::after {
+				border-color: $color-pag;
+			}
+		}
+
+		&_right {
+
+			i {
+				line-height: 2.7rem;
+				font-size: 3rem;
+			}
+		}
+	}
+}
