@@ -6,6 +6,7 @@ $(function() {
 		loop: true,
 		autoplay: true,
 		autoplayTimeout: 5000,
+		autoplayHoverPause: true,
 		dots: false,
 		nav: true,
 		navText: '',

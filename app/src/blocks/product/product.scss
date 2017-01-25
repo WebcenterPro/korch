@@ -1,7 +1,11 @@
 .product {
 
-	&__img {
+	&__fotorama {
+		margin-bottom: 4em;
 
+		@media (min-width: $screen-sm) {
+			margin-bottom: 0;
+		}
 	}
 
 	&__title {
