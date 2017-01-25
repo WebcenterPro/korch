@@ -1,6 +1,7 @@
 .accord {
 
 	&__panel {
+		box-shadow: none;
 		margin: 0;
 		border: none;
 		border-radius: 0;
@@ -13,6 +14,23 @@
 
 	&__head {
 		position: relative;
+		transition: .2s ease all;
+
+		&:hover {
+			background-color: $color-lightest;
+		}
+
+		&_active {
+			background-color: $color-lighter;
+
+			&:hover {
+				background-color: $color-lighter;
+			}
+
+			.accord__arrow {
+				transform: translateY(-50%) rotate(180deg);
+			}
+		}
 	}
 
 	&__title {
@@ -27,7 +45,6 @@
 		&:hover,
 		&:focus {
 			color: $color-main;
-			background-color: $color-lighter;
 		}
 	}
 
@@ -40,14 +57,12 @@
 		top: 50%;
 		transition: .2s ease;
 		transform: translateY(-50%);
-
-		&_active {
-			transform: translateY(-50%) rotate(180deg);
-		}
 	}
 
 	&__body {
 		border-top: 1px solid $color-lighter;
 		padding: 15px;
+		color: $color-main;
+		text-align: justify;
 	}
 }

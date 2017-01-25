@@ -18,6 +18,10 @@
 		color: darken($color-light, 20%);
 	}
 
+	&:active {
+		transform: scale(.98);
+	}
+
 	&_wide {
 		width: 100%;
 	}
