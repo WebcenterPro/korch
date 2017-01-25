@@ -4,12 +4,11 @@
 	display: inline-block;
 	position: relative;
 	font-size: 2.0rem;
-	min-width: 200px;
+	color: $color-gray;
 
 	&__current {
 		padding: .5em 2.5em .5em 1em;
 		background-color: white;
-		color: $color-gray;
 		border: 1px solid $color-lighter;
 		transition: .2s ease;
 
@@ -55,7 +54,6 @@
 
 	&__item {
 		padding: .5em 1em;
-		color: $color-gray;
 		transition: .2s ease-out background;
 
 		&:hover {

@@ -1,0 +1,50 @@
+.select-double {
+
+	&::after {
+		@extend %clear;
+	}
+
+	&__wrap {
+		padding: 0 15px;
+		text-align: center;
+
+		@media (min-width: $screen-sm) {
+			text-align: left;
+		}
+
+		&_left {
+
+			@media (min-width: $screen-xs) {
+				float: left;
+			}
+		}
+
+		&_right {
+
+			@media (min-width: $screen-xs) {
+				float: right;
+			}
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-size: 2rem;
+		margin: 10px 0 5px;
+		font-weight: 600;
+
+		@media (min-width: $screen-sm) {
+			margin: 0 1.5em 0 0;
+			display: inline-block;
+		}
+	}
+
+	&__select {
+		text-align: left;
+		min-width: 100%;
+
+		@media (min-width: $screen-xs) {
+			min-width: 12.5em;
+		}
+	}
+}

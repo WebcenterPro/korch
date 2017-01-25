@@ -3,7 +3,7 @@ $(function() {
 
 		var
 			$this = $(this), // Текущий селект
-			$selectWrap = 'select', // Внешняя обёртка селекта
+			$selectWrap = $this.attr('class'), // Внешняя обёртка селекта
 			$selectClass = 'select__current', // Новый селект, сделанный на основе исходника (само поле)
 			$activeClass = 'select__current_active', // Стили для открытого селекта
 			$listClass = 'select__list', // Новый список селекта (скрытые пункты)
@@ -71,11 +71,11 @@ $(function() {
 
 			var target = event.target;
 			while (target.tagName != 'BODY') {
-				if (target.classList.contains($selectWrap)) break;
+				if ($(target).hasClass($selectWrap)) break;
 				target = target.parentNode;
 			}
 
-			if (target.classList.contains($selectWrap)) return;
+			if ($(target).hasClass($selectWrap)) return;
 
 			$styledSelect.removeClass($activeClass);
 			$list.slideUp($delay);
