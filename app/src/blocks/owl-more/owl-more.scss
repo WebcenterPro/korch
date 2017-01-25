@@ -1,0 +1,34 @@
+.owl-more {
+	padding: 0 30px;
+
+	&__arrow {
+		font-size: 7rem;
+		color: $color-light;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.owl-prev,
+	.owl-next {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 45px;
+		transition: .3s ease;
+
+		&:hover,
+		&:focus {
+			background-color: rgba(215, 242, 249, .7);
+		}
+	}
+
+	.owl-prev {
+		left: -15px;
+	}
+
+	.owl-next {
+		right: -15px;
+	}
+}

@@ -38,9 +38,12 @@
 		outline-offset: -2px;
 		transition: .3s ease;
 
-		&:hover,
-		&:focus {
-			transform: scale(1.1);
+		&:not(:active) {
+
+			&:hover,
+			&:focus {
+				transform: scale(1.1);
+			}
 		}
 
 		&_active {
