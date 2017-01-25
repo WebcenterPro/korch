@@ -1,0 +1,53 @@
+.accord {
+
+	&__panel {
+		margin: 0;
+		border: none;
+		border-radius: 0;
+		border-top: 1px solid $color-lighter;
+
+		&:last-child {
+			border-bottom: 1px solid $color-lighter;
+		}
+	}
+
+	&__head {
+		position: relative;
+	}
+
+	&__title {
+		font-size: 2.2rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $color-main;
+		text-decoration: none;
+		display: block;
+		padding: .8em 40px .8em 15px;
+		
+		&:hover,
+		&:focus {
+			color: $color-main;
+			background-color: $color-lighter;
+		}
+	}
+
+	&__arrow {
+		pointer-events: none;
+		color: $color-light;
+		font-size: 2.5rem;
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		transition: .2s ease;
+		transform: translateY(-50%);
+
+		&_active {
+			transform: translateY(-50%) rotate(180deg);
+		}
+	}
+
+	&__body {
+		border-top: 1px solid $color-lighter;
+		padding: 15px;
+	}
+}

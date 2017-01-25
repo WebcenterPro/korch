@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('partials/head.html')
+	<title>Карточка товара | Bioaqua</title>
+</head>
+<body>
+
+<div class="wrapper">
+
+	@@include('partials/header.html')
+
+	<main class="main">
+
+		<div class="container">
+
+			<ul class="breadcrumb bread main__bread">
+				<li class="bread__item"><a class="bread__link" href="#">Main</a></li>
+				<li class="bread__item"><a class="bread__link" href="#">Makeup</a></li>
+				<li class="bread__item"><a class="bread__link" href="#">Lipstick</a></li>
+				<li class="bread__item bread__item_active">Matte Lipstick</li>
+			</ul>
+
+
+			<article class="product">
+				<div class="row">
+
+					<div class="col-sm-6">
+						<div class="product__img"></div>
+					</div>
+
+					<div class="col-sm-6">
+						<h1 class="product__title">BIOAQUA Lipstick Top Quality Matte Lipstick for Cosmetics Beauty Makup Ageless Queen Scepter Velvet</h1>
+						<p class="product__price">$ 3,56</p>
+
+						<div class="product__color-wrap">
+							<div class="product__color product__color_1 product__color_active"></div>
+							<div class="product__color product__color_2"></div>
+							<div class="product__color product__color_3"></div>
+							<div class="product__color product__color_4"></div>
+							<div class="product__color product__color_5"></div>
+							<div class="product__color product__color_6"></div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-8">
+								<select class="select product__select">
+									<option value="select_shade">Select shade</option>
+									<option value="something_else">Something else</option>
+									<option value="something_else">Something else</option>
+									<option value="something_else">Something else</option>
+									<option value="something_else">Something else</option>
+								</select>
+							</div>
+							<div class="col-xs-4">
+								<select class="select product__select">
+									<option value="count_1">1</option>
+									<option value="count_2">2</option>
+									<option value="count_3">3</option>
+									<option value="count_4">4</option>
+									<option value="count_5">5</option>
+									<option value="count_6">6</option>
+									<option value="count_7">7</option>
+									<option value="count_8">8</option>
+									<option value="count_9">9</option>
+									<option value="count_10">10</option>
+								</select>
+							</div>
+						</div>
+
+						<input class="button button_wide product__button" type="submit" value="Add to bag">
+
+						<div class="accord product__accord" id="accord">
+							<div class="panel accord__panel">
+								<div class="accord__head">
+									<a class="accord__title" data-toggle="collapse" data-parent="#accord" href="#accordOne">Product description</a>
+									<i class="fa fa-angle-down accord__arrow"></i>
+								</div>
+								<div id="accordOne" class="panel-collapse collapse">
+									<div class="accord__body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores assumenda cupiditate distinctio dolores eaque exercitationem harum, illo ipsam iusto, laudantium minima modi, odio optio provident qui ratione tempore tenetur?
+									</div>
+								</div>
+							</div>
+							<div class="panel accord__panel">
+								<div class="accord__head">
+									<a class="accord__title" data-toggle="collapse" data-parent="#accord" href="#accordTwo">Product features</a>
+									<i class="fa fa-angle-down accord__arrow"></i>
+								</div>
+								<div id="accordTwo" class="panel-collapse collapse">
+									<div class="accord__body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores assumenda cupiditate distinctio dolores eaque exercitationem harum, illo ipsam iusto, laudantium minima modi, odio optio provident qui ratione tempore tenetur?
+									</div>
+								</div>
+							</div>
+							<div class="panel accord__panel">
+								<div class="accord__head">
+									<a class="accord__title" data-toggle="collapse" data-parent="#accord" href="#accordThree">Instructions</a>
+									<i class="fa fa-angle-down accord__arrow"></i>
+								</div>
+								<div id="accordThree" class="panel-collapse collapse">
+									<div class="accord__body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores assumenda cupiditate distinctio dolores eaque exercitationem harum, illo ipsam iusto, laudantium minima modi, odio optio provident qui ratione tempore tenetur?
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+
+			<h2 class="main__title">More products</h2>
+
+			<div class="row">
+				<div class="col-xs-6 col-sm-4 col-md-3 main__xxs">
+					<a href="#" class="item main__item">
+						<div class="item__img item__img_1"></div>
+						<p class="item__title">Face Care Suction Black Mask Facial Mask Nose Blackhead Remover Peeling Peel Off Black Head Acne Treatments Better Than BIOAQUA</p>
+						<p class="item__price">
+							<span class="item__currency">$</span>
+							<span class="item__value">6,70</span>
+						</p>
+					</a>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3 main__xxs">
+					<a href="#" class="item main__item">
+						<div class="item__img item__img_2"></div>
+						<p class="item__title">BIOAQUA Baby Lips Lip Balm Purse Organic Lips Makeup Smooth Moisturizer Natural 5 Colors Optional</p>
+						<p class="item__price">
+							<span class="item__currency">$</span>
+							<span class="item__value">1,99</span>
+						</p>
+					</a>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3 main__xxs">
+					<a href="#" class="item main__item">
+						<div class="item__img item__img_3"></div>
+						<p class="item__title">BIOAQUA Egg Facial Masks Tender Moisturizing Face Mask Oil Control Brighten Wrapped Mask Skin Care</p>
+						<p class="item__price">
+							<span class="item__currency">$</span>
+							<span class="item__value">0,88</span>
+						</p>
+					</a>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3 main__xxs">
+					<a href="#" class="item main__item">
+						<div class="item__img item__img_4"></div>
+						<p class="item__title">BIOAQUA Hyaluronic Acid Liquid Anti Wrinkle Serum Skin Care Whitening Moisturizing DayCream Anti Aging Collagen Essence Oil</p>
+						<p class="item__price">
+							<span class="item__currency">$</span>
+							<span class="item__value">3,53</span>
+						</p>
+					</a>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3 main__xxs">
+					<a href="#" class="item main__item">
+						<div class="item__img item__img_6"></div>
+						<p class="item__title">BIOAQUA Blueberry Wonder Essence For Face Skin Care Effect Plant Extract Anti Wrinkle Facial Serum Sodium Hyaluronate Serum</p>
+						<p class="item__price">
+							<span class="item__currency">$</span>
+							<span class="item__value">4,49</span>
+						</p>
+					</a>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3 main__xxs">
+					<a href="#" class="item main__item">
+						<div class="item__img item__img_7"></div>
+						<p class="item__title">BIOAQUA Hydrating meticulous Smooth black eye mask Fade Dark Circle Eye Bag Anti-Wrinkles Hydrating Moist Brighten Eyes Mask</p>
+						<p class="item__price">
+							<span class="item__currency">$</span>
+							<span class="item__value">0,5</span>
+							<span class="item__dash">-</span>
+							<span class="item__currency">$</span>
+							<span class="item__value">4,79</span>
+						</p>
+					</a>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3 main__xxs">
+					<a href="#" class="item main__item">
+						<div class="item__img item__img_5"></div>
+						<p class="item__title">BIOAQUA Bamboo Charcoal Essential Oil Facial Clean Soap Acne Treatment To Blackhead Oil Control Shrink Pores Free Shipping</p>
+						<p class="item__price">
+							<span class="item__currency">$</span>
+							<span class="item__value">3,99</span>
+						</p>
+					</a>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3 main__xxs">
+					<a href="#" class="item main__item">
+						<div class="item__img item__img_8"></div>
+						<p class="item__title">BIOAQUA Brand Makeup Base Primer 20g Face Cover Pore Whitening Concealer Oil-control Liquid Foundation Make Up Primer Cream</p>
+						<p class="item__price">
+							<span class="item__currency">$</span>
+							<span class="item__value">2,45</span>
+						</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>
+
+@@include('partials/footer.html')
+
+<!-- END OF VISIBLE CONTENT -->
+
+@@include('partials/aside.html')
+@@include('partials/modals.html')
+
+</body>
+</html>

@@ -25,6 +25,11 @@
 			border-bottom: none;
 			transition: .2s ease;
 		}
+		
+		&:hover,
+		&:focus {
+			background-color: $color-lighter;
+		}
 
 		&_active {
 			background-color: $color-light;
@@ -34,6 +39,11 @@
 			&::after {
 				transform: translateX(-50%) translateY(-50%) rotate(180deg);
 				border-top-color: white;
+			}
+
+			&:hover,
+			&:focus {
+				background-color: $color-light;
 			}
 		}
 	}

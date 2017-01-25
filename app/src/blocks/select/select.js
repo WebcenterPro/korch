@@ -70,7 +70,7 @@ $(function() {
 		$(document).on('mousedown', function() { // Обрабатываем клик вне селекта
 
 			var target = event.target;
-			while (target.tagName != 'BODY') {
+			while (target.tagName != 'HTML') {
 				if ($(target).hasClass($selectWrap)) break;
 				target = target.parentNode;
 			}
