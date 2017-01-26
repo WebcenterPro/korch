@@ -67,9 +67,9 @@ $(function() {
 			$list.slideUp($delay); // Скрываем список
 		});
 
-		$(document).on('mousedown', function() { // Обрабатываем клик вне селекта
+		$(document).on('mousedown', function(e) { // Обрабатываем клик вне селекта
 
-			var target = event.target;
+			var target = e.target;
 			while (target.tagName != 'HTML') {
 				if ($(target).hasClass($selectWrap)) break;
 				target = target.parentNode;

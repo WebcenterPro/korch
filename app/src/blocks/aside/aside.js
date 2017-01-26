@@ -72,8 +72,8 @@ $(function(){
 		$aside.multilevelpushmenu('expand');
 	});
 
-	$(document).on('click', function() { // Скрытие бокового меню при клике вне него
-		var target = event.target;
+	$(document).on('click', function(e) { // Скрытие бокового меню при клике вне него
+		var target = e.target;
 
 		while (target.tagName != 'BODY') {
 			if (target.getAttribute('id') == 'menu') return;
