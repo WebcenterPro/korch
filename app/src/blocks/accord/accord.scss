@@ -64,5 +64,32 @@
 		padding: 15px;
 		color: $color-main;
 		text-align: justify;
+		max-height: 300px;
+		position: relative;
 	}
+
+	// Стилизация ползунка
+	.ps-scrollbar-y-rail {
+		background-color: transparent !important;
+
+		&:hover {
+
+			.ps-scrollbar-y {
+				width: 8px !important;
+				background-color: $color-light !important;
+			}
+		}
+	}
+
+	.ps-scrollbar-y {
+		width: 5px !important;
+		background-color: darken($color-lighter, 5%) !important;
+
+		&:hover,
+		&:active {
+			width: 8px !important;
+			background-color: $color-light !important;
+		}
+	}
+	// ===================
 }
