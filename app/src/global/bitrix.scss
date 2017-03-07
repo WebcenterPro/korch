@@ -1,0 +1,10 @@
+/* Сообщение о необходимости авторизации */
+.reg-info {
+	margin: 0;
+	padding: 15px;
+	background-color: $color-lighter;
+	color: $color-main;
+	border: 1px solid $color-light;
+	border-radius: 5px;
+	text-align: center;
+}

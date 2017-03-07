@@ -93,6 +93,7 @@ input {
 a {
 	transition: .2s ease all;
 	color: $color-main;
+	text-decoration: underline;
 
 	&:hover,
 	&:focus {
