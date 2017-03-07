@@ -4,9 +4,16 @@
 	&__item {
 		background: no-repeat 50% 0;
 		background-size: cover;
-		padding-bottom: 45%;
+		padding-bottom: 100%;
 		position: relative;
 
+		@media (min-width: $screen-xs) {
+			padding-bottom: 60%;
+		}
+
+		@media (min-width: $screen-md) {
+			padding-bottom: 40%;
+		}
 
 		&_img-1 {
 			background-image: url('../img/slide-1.jpg');

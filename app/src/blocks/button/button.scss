@@ -10,6 +10,8 @@
 	outline: 1px solid rgba(255, 255, 255, .5);
 	outline-offset: -5px;
 	transition: .3s ease;
+	padding: .9em 3em;
+	text-align: center;
 
 	&:hover,
 	&:focus {
@@ -18,11 +20,11 @@
 		color: darken($color-light, 20%);
 	}
 
-	&:active {
-		transform: scale(.98);
-	}
-
 	&_wide {
 		width: 100%;
+
+		&:active {
+			transform: scale(.98);
+		}
 	}
 }

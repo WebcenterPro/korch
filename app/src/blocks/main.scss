@@ -108,4 +108,75 @@
 	&__owl-more {
 		margin-bottom: 7em;
 	}
+
+	&__section {
+		background: no-repeat 50% 0;
+		background-size: cover;
+		padding-bottom: 100%;
+		position: relative;
+
+		@media (min-width: $screen-xs) {
+			padding-bottom: 60%;
+		}
+
+		@media (min-width: $screen-md) {
+			padding-bottom: 40%;
+		}
+
+		&_bright {
+			background-color: $color-lightest;
+		}
+	}
+
+	&__full-center {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		text-align: center;
+	}
+
+	&__404 {
+		position: relative;
+		background: url('../img/404.png') no-repeat;
+		background-size: cover;
+		width: 200px;
+		height: 89px;
+		margin: 0 auto 3em;
+
+		@media (min-width: $screen-sm) {
+			width: 300px;
+			height: 133px;
+		}
+
+		@media (min-width: $screen-md) {
+			width: 350px;
+			height: 156px;
+		}
+
+		&::after {
+
+			@media (min-width: $screen-lg) {
+				content: '';
+				position: absolute;
+				display: inline-block;
+				left: 100%;
+				bottom: 0;
+				background: url('../img/404-pen.png') no-repeat;
+				background-size: cover;
+				width: 274px;
+				height: 140px;
+			}
+		}
+	}
+
+	&__404-desc {
+		font-size: 3.5rem;
+		color: $color-main;
+		margin-bottom: .8em;
+
+		@media (min-width: $screen-sm) {
+			font-size: 6rem;
+		}
+	}
 }
