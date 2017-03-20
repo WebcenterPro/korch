@@ -1,4 +1,5 @@
 .pag {
+	font-family: $font-second;
 
 	&__list {
 		list-style-type: none;
@@ -17,31 +18,35 @@
 	}
 
 	&__link {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		display: inline-block;
 		padding: 6px 12px;
 		text-decoration: none;
 		border: none;
-		color: $color-main;
+		color: $c-darkest;
 		position: relative;
 
 		&::after {
+			color: $c-dark;
 			content: '';
 			position: absolute;
-			bottom: 0;
-			left: 20%;
-			right: 20%;
-			border-bottom: 2px solid transparent;
-			transition: .3s ease;
+			width: 100%;
+			height: 1em;
+			bottom: 5px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: $c-main;
+			transition: .1s ease;
+			opacity: 0;
 		}
-
 
 		&:hover,
 		&:focus {
-			color: $color-main;
+			color: $c-darkest;
 
 			&::after {
-				border-color: $color-lighter;
+				background-color: $c-dark;
+				opacity: .15;
 			}
 		}
 
@@ -49,7 +54,7 @@
 		&_active {
 
 			&::after {
-				border-color: $color-pag;
+				opacity: .15;
 			}
 		}
 

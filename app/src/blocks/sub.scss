@@ -1,15 +1,5 @@
 .sub {
 
-	&__title {
-		font-weight: 600;
-		font-size: 2.4rem;
-		text-transform: uppercase;
-		color: $color-main;
-		padding-top: 1.3rem;
-		padding-bottom: 1.3rem;
-		line-height: 2rem;
-	}
-
 	&__item {
 		padding-top: 1.3rem;
 		padding-bottom: 1.3rem;
@@ -17,8 +7,33 @@
 	}
 
 	&__link {
-		color: black;
+		color: $c-dark;
 		text-decoration: none;
 		display: inline-block;
+		position: relative;
+		font-weight: 600;
+
+		&::after {
+			color: $c-dark;
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 1em;
+			bottom: -10px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: $c-main;
+			transition: .1s ease;
+			opacity: 0;
+		}
+
+		&:hover,
+		&:focus {
+			color: $c-dark;
+
+			&::after {
+				opacity: .15;
+			}
+		}
 	}
 }
