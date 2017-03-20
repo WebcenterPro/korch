@@ -1,21 +1,25 @@
 .item {
-	font-size: 2rem;
 	line-height: 1.45em;
 	display: block;
 	text-decoration: none;
 	color: black;
+	background-color: white;
+	padding: 15px;
+	box-shadow: 0 0 30px -10px $c-main;
+	position: relative;
+	transition: .2s ease;
+	text-align: center;
 	
 	&:hover,
 	&:focus {
-		color: lighten($color-main, 10%);
-		
-		.item {
-			
-			&__img {
+		box-shadow: 0 0 45px -10px $c-main;
+		color: black;
 
-				@media (min-width: $screen-md) {
-					transform: scale(1.03);
-				}
+		.item {
+			//=====
+
+			&__buy {
+				opacity: 1;
 			}
 		}
 	}
@@ -34,65 +38,81 @@
 		}
 
 		&_2 {
-			background-image: url('../img/art-2.jpg');
+			background-image: url('../img/art-2.png');
 		}
 
 		&_3 {
-			background-image: url('../img/art-3.jpg');
+			background-image: url('../img/art-3.png');
 		}
 
 		&_4 {
-			background-image: url('../img/art-4.jpg');
+			background-image: url('../img/art-4.png');
 		}
 
 		&_5 {
-			background-image: url('../img/art-5.jpg');
+			background-image: url('../img/art-5.png');
 		}
 
 		&_6 {
-			background-image: url('../img/art-6.jpg');
+			background-image: url('../img/art-6.png');
 		}
 
 		&_7 {
-			background-image: url('../img/art-7.jpg');
+			background-image: url('../img/art-7.png');
 		}
 
 		&_8 {
-			background-image: url('../img/art-8.jpg');
+			background-image: url('../img/art-8.png');
 		}
 	}
 
 	&__title {
-		margin: 0 0 5px;
+		margin: 0 0 10px;
+		color: $c-main;
+		font-family: $font-second;
+		text-transform: uppercase;
+		font-size: 1.9rem;
 
 		@media (min-width: $screen-xs) {
-			height: 7.3em;
 			overflow: hidden;
 			position: relative;
 		}
+	}
 
-		&::first-line {
-			font-weight: 700;
-		}
-
-		&::after {
-
-			@media (min-width: $screen-xs) {
-				content: '';
-				display: inline-block;
-				position: absolute;
-				right: 0;
-				bottom: 0;
-				width: 5em;
-				height: 1.7em;
-				background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
-			}
-		}
+	&__desc {
+		color: $c-darkest;
+		font-weight: 300;
+		font-size: 2.1rem;
+		margin-bottom: 1.5em;
 	}
 
 	&__price {
-		font-size: 2.3rem;
-		font-weight: 700;
-		margin: 0;
+		font-size: 2.8rem;
+		font-weight: 600;
+		margin-bottom: 1em;
+	}
+
+	&__buy {
+		margin-bottom: 2.8rem;
+		opacity: 0;
+		position: absolute;
+		width: 70%;
+		bottom: 5px;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: .2s ease;
+	}
+
+	&_must {
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			background: url('../img/must.png') no-repeat;
+			width: 144px;
+			height: 140px;
+		}
 	}
 }

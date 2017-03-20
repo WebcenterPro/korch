@@ -3,39 +3,52 @@
 	padding: 0;
 	margin: 0;
 	color: $color-footer;
-	display: inline-block;
-	text-align: left;
+	display: block;
+	text-align: center;
 
 	&::after {
 		@extend %clear;
 	}
 
-	&__wrap {
-		display: block;
-		float: left;
-		padding-right: 1.5em;
-
-		@media (min-width: $screen-sm) {
-			padding-right: 3em;
-		}
-
-		&:last-child {
-			padding-right: 0;
-		}
-	}
-
-	&__col {
-		list-style-type: none;
-		padding: 0;
-	}
-
 	&__item {
 		margin-bottom: 10px;
+		margin-right: 20px;
+		display: inline-block;
+		padding: 0 5px;
+		position: relative;
+
+		&:last-child {
+			margin-right: 0;
+		}
 	}
 
 	&__link {
-		color: $color-footer;
+		color: $c-dark;
+		display: inline-block;
 		text-decoration: none;
-		font-weight: bold;
+		font-weight: 600;
+		font-size: 2.2rem;
+
+		&::after {
+			color: $c-dark;
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 1em;
+			bottom: -5px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: $c-main;
+			transition: .1s ease;
+			opacity: 0;
+		}
+
+		&:hover {
+			color: $c-dark;
+
+			&::after {
+				opacity: .15;
+			}
+		}
 	}
 }

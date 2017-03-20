@@ -5,7 +5,7 @@ $(function() {
 		dots: true,
 		dotsClass: 'owl__dots',
 		dotClass: "owl__dot",
-		nav: true,
+		nav: false,
 		navText: ''
 	});
 });

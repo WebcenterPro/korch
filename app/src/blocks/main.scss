@@ -1,14 +1,15 @@
 .main {
+	background: no-repeat 50% 50%;
+	background-size: cover;
 
 	&__gap {
 		margin-bottom: 5em;
 	}
 
 	&__title {
-		text-transform: uppercase;
 		font-size: 4.5rem;
-		color: $color-main;
-		font-weight: normal;
+		color: $c-dark;
+		font-weight: 800;
 		text-align: center;
 		margin: 0 0 1.5em;
 	}
@@ -178,5 +179,47 @@
 		@media (min-width: $screen-sm) {
 			font-size: 6rem;
 		}
+	}
+
+	&__gap-pad {
+		padding: 5em 0;
+	}
+
+	&__adv-cont {
+		padding: 0;
+
+		@media (min-width: $screen-xs) {
+			border-right: 1px solid $c-light;
+		}
+
+		&:nth-child(2n) {
+
+			@media (min-width: $screen-xs) {
+				border-right: none;
+			}
+
+			@media (min-width: $screen-sm) {
+				border-right: 1px solid $c-light;
+			}
+		}
+
+		&:last-child {
+
+			@media (min-width: $screen-sm) {
+				border-right: none;
+			}
+		}
+	}
+
+	&__img-1 {
+		background-image: url('../img/slide-2.jpg');
+	}
+
+	&__light {
+		background-color: $c-light;
+	}
+	
+	&__blue {
+		background-color: $c-second;
 	}
 }

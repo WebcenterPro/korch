@@ -1,30 +1,24 @@
 .button {
 	display: inline-block;
-	color: $color-main;
-	height: 3.15em;
-	font-size: 2rem;
+	color: white;
+	font-size: 2.5rem;
+	background-color: $c-main;
 	text-transform: uppercase;
-	font-weight: 700;
-	background: url('../img/btn-bg.jpg') 50% -65px;
+	text-decoration: none;
 	border: none;
-	outline: 1px solid rgba(255, 255, 255, .5);
-	outline-offset: -5px;
 	transition: .3s ease;
-	padding: .9em 3em;
+	padding: .45em 1.5em;
 	text-align: center;
+	border-radius: 12%/50%;
+	font-family: $font-second;
 
 	&:hover,
 	&:focus {
-		outline: 1px solid rgba(255, 255, 255, .5);
-		outline-offset: 0;
-		color: darken($color-light, 20%);
+		color: white;
+		background-color: darken($c-main, 10%);
 	}
 
-	&_wide {
-		width: 100%;
-
-		&:active {
-			transform: scale(.98);
-		}
+	&:active {
+		background-color: darken($c-main, 20%);
 	}
 }

@@ -1,8 +1,7 @@
 .footer {
 	flex: 0 0 auto;
-	background:  url('../img/bg.jpg') 50% 0;
 	padding: 3em 0 1em;
-	color: $color-footer;
+	color: $c-light-3;
 
 	&__row {
 		margin-bottom: 2.5em;
@@ -13,32 +12,26 @@
 		}
 	}
 
-	&__logo {
-		margin-bottom: 30px;
-
-		@media (min-width: $screen-sm) {
-			margin-bottom: 0;
-		}
-	}
-
 	&__phone {
 		text-align: center;
 		margin: 15px 0 0;
 
-		@media (min-width: $screen-md) {
+		@media (min-width: $screen-xs) {
 			text-align: right;
 			margin: 0;
 		}
 	}
 
-	&__phone-link {
-		color: $color-footer;
-		text-decoration: none;
-		font-weight: bold;
+	&__copyright {
+		text-align: left;
+
+		@media (min-width: $screen-sm) {
+			text-align: right;
+		}
 	}
 
 	&__copyright-link {
-		color: $color-footer;
+		color: darken($c-light-3, 30%);
 		border-bottom: 1px dashed transparent;
 		text-decoration: none;
 
@@ -51,13 +44,23 @@
 
 	&__rights {
 		text-align: left;
+		color: $c-light-3;
+	}
 
-		@media (min-width: $screen-sm) {
-			text-align: right;
+	&__soc-wrap {
+		text-align: center;
+		margin-bottom: 3em;
+	}
+
+	&__soc {
+		margin-right: 10px;
+
+		@media (min-width: $screen-xs) {
+			margin-right: 15px;
 		}
 
-		@media (min-width: $screen-md) {
-			text-align: center;
+		&:last-child {
+			margin-right: 0;
 		}
 	}
 }

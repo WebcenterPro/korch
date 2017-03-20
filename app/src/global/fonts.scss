@@ -118,3 +118,15 @@
 	url('../fonts/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'),
 	url('../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+
+@font-face {
+	font-family: 'Garamond';
+	src: url('../fonts/garamond/Garamond.eot');
+	src: url('../fonts/garamond/Garamond.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/garamond/Garamond.woff2') format('woff2'),
+	url('../fonts/garamond/Garamond.woff') format('woff'),
+	url('../fonts/garamond/Garamond.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+
+}

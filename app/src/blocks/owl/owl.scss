@@ -2,7 +2,7 @@
 	position: relative;
 
 	&__item {
-		background: no-repeat 50% 0;
+		background: no-repeat 50% 50%;
 		background-size: cover;
 		padding-bottom: 100%;
 		position: relative;
@@ -17,6 +17,10 @@
 
 		&_img-1 {
 			background-image: url('../img/slide-1.jpg');
+		}
+
+		&_img-2 {
+			background-image: url('../img/slide-3.jpg');
 		}
 	}
 
@@ -41,56 +45,23 @@
 	}
 
 	&__dot {
-		width: 20px;
-		height: 20px;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
 		margin-right: 20px;
-		background-color: white;
+		background-color: $c-main-light;
 		display: inline-block;
 		cursor: pointer;
 		transition: .3s ease;
+		vertical-align: middle;
 
 		&:last-child {
 			margin-right: 0;
 		}
 		
 		&.active {
-			background-color: $color-light;
+			width: 20px;
+			height: 20px;
 		}
-	}
-
-	.owl-prev,
-	.owl-next {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		background-repeat: no-repeat;
-		background-size: contain;
-		opacity: .6;
-		transition: .3s ease;
-		overflow: hidden;
-		max-width: 117px;
-		max-height: 160px;
-		height: 40%;
-		width: 12%;
-
-		@media (min-width: $screen-sm) {
-			height: 20%;
-			width: 6%;
-		}
-
-		&:hover,
-		&:focus {
-			opacity: 1;
-		}
-	}
-
-	.owl-prev {
-		left: 0;
-		@include bgi-retina('../img/left', 'jpg');
-	}
-
-	.owl-next {
-		right: 0;
-		@include bgi-retina('../img/right', 'jpg');
 	}
 }

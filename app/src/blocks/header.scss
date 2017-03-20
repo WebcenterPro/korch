@@ -9,6 +9,7 @@
 		padding-top: $top-height;
 		background: url('../img/bg.jpg') 50% -330px;
 		background-clip: content-box;
+		overflow: hidden;
 
 		@media (min-width: $screen-sm) {
 			text-align: center;
@@ -28,15 +29,15 @@
 	&__logo {
 		margin-left: $side-xs;
 		width: 160px;
-		height: 41px;
+		height: 30px;
 
 		@media (min-width: $screen-sm) {
 			margin-left: 0;
 		}
 
 		@media (min-width: $screen-md) {
-			width: 201px;
-			height: 52px;
+			width: 413px;
+			height: 78px;
 		}
 	}
 
