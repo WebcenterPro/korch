@@ -5,10 +5,15 @@
 		margin: 0;
 		border: none;
 		border-radius: 0;
-		border-top: 1px solid $color-lighter;
+		border-top: 2px solid $c-main;
+		background-color: transparent;
+
+		&:first-child {
+			border-top: none;
+		}
 
 		&:last-child {
-			border-bottom: 1px solid $color-lighter;
+			border-bottom: 2px solid $c-main;
 		}
 	}
 
@@ -16,16 +21,7 @@
 		position: relative;
 		transition: .2s ease all;
 
-		&:hover {
-			background-color: $color-lightest;
-		}
-
 		&_active {
-			background-color: $color-lighter;
-
-			&:hover {
-				background-color: $color-lighter;
-			}
 
 			.accord__arrow {
 				transform: translateY(-50%) rotate(180deg);
@@ -34,24 +30,23 @@
 	}
 
 	&__title {
-		font-size: 2.2rem;
-		font-weight: 600;
-		text-transform: uppercase;
-		color: $color-main;
+		font-size: 3rem;
+		font-family: $font-second;
+		color: $c-dark;
 		text-decoration: none;
 		display: block;
 		padding: .8em 40px .8em 15px;
 		
 		&:hover,
 		&:focus {
-			color: $color-main;
+			color: $c-main;
 		}
 	}
 
 	&__arrow {
 		pointer-events: none;
-		color: $color-light;
-		font-size: 2.5rem;
+		color: $c-main;
+		font-size: 3.5rem;
 		position: absolute;
 		right: 15px;
 		top: 50%;
@@ -60,9 +55,9 @@
 	}
 
 	&__body {
-		border-top: 1px solid $color-lighter;
 		padding: 15px;
-		color: $color-main;
+		color: $c-dark;
+		font-size: 2rem;
 		text-align: justify;
 		max-height: 300px;
 		position: relative;
@@ -76,19 +71,19 @@
 
 			.ps-scrollbar-y {
 				width: 8px !important;
-				background-color: $color-light !important;
+				background-color: $c-main !important;
 			}
 		}
 	}
 
 	.ps-scrollbar-y {
 		width: 5px !important;
-		background-color: darken($color-lighter, 5%) !important;
+		background-color: $c-main-light !important;
 
 		&:hover,
 		&:active {
 			width: 8px !important;
-			background-color: $color-light !important;
+			background-color: $c-main !important;
 		}
 	}
 	// ===================

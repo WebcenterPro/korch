@@ -86,7 +86,7 @@
 	}
 
 	&__bread {
-		margin: .9em 0;
+		margin: 1em 0 2em;
 	}
 
 	&__pag {
@@ -105,10 +105,6 @@
 
 	&__product {
 		margin-bottom: 4em;
-	}
-
-	&__owl-more {
-		margin-bottom: 7em;
 	}
 
 	&__section {
@@ -245,5 +241,9 @@
 	
 	&__blue {
 		background-color: $c-second;
+	}
+
+	&__orange {
+		background-color: $c-main-light;
 	}
 }

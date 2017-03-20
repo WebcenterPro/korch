@@ -8,7 +8,7 @@ $(function() {
 		autoplayTimeout: 5000,
 		autoplayHoverPause: true,
 		dots: false,
-		nav: true,
+		nav: false,
 		navText: '',
 		margin: 30,
 		responsive: {
