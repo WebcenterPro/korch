@@ -3,15 +3,19 @@
 	position: fixed;
 	font-size: 1.8rem;
 	z-index: 50;
-	background: linear-gradient(to bottom, white, transparent);
+	background: linear-gradient(to bottom, white 5%, rgba(255, 255, 255, .8) 50%, transparent 100%);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.3em 0 1em;
 
 	&__left {
-		width: 360px;
-		margin-left: 2em;
+		margin-left: 15px;
+
+		@media (min-width: $screen-md) {
+			margin-left: 2em;
+			width: 360px;
+		}
 
 		@media (min-width: $screen-lg) {
 			margin-left: 3em;
@@ -20,8 +24,12 @@
 
 	&__right {
 		text-align: right;
-		width: 360px;
-		margin-right: 2em;
+		margin-right: 15px;
+
+		@media (min-width: $screen-md) {
+			margin-right: 2em;
+			width: 360px;
+		}
 
 		@media (min-width: $screen-lg) {
 			margin-right: 3em;
@@ -29,8 +37,13 @@
 	}
 
 	&__logo {
-		width: 160px;
-		height: 30px;
+		display: none;
+
+		@media (min-width: $screen-xs) {
+			display: block;
+			width: 160px;
+			height: 30px;
+		}
 
 		@media (min-width: $screen-lg) {
 			width: 413px;
@@ -50,10 +63,6 @@
 		color: $c-dark;
 		text-decoration: none;
 		display: inline-block;
-
-		&_menu {
-			vertical-align: middle;
-		}
 	}
 
 	&__line {
@@ -61,15 +70,21 @@
 		line-height: 2.5;
 		border-left: 1px solid $c-light-3;
 		margin: 0 1em;
+
+		&_hidden_xxs {
+
+			@media (max-width: $screen-xs - 1) {
+				display: none;
+			}
+		}
 	}
 
 	&__toggle {
-		margin-right: 1em;
-	}
-
-	&__toggle-wrap {
 		display: inline-block;
-		margin-right: 2em;
 		vertical-align: middle;
+
+		@media (min-width: $screen-sm) {
+			margin-right: 2em;
+		}
 	}
 }

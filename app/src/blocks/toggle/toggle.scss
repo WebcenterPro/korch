@@ -1,0 +1,79 @@
+.toggle {
+	cursor: pointer;
+	transition: opacity .5s, visibility 0s;
+	visibility: visible;
+	opacity: 1;
+	user-select: none;
+
+	&:hover {
+
+		.toggle {
+			//=====
+
+			&__text {
+				color: $c-main;
+			}
+
+			&__line {
+				background-color: $c-main;
+			}
+		}
+	}
+
+	&__text {
+		display: none;
+
+		@media (min-width: $screen-sm) {
+			display: inline-block;
+			vertical-align: middle;
+			transition: .3s ease;
+		}
+	}
+
+	&__btn {
+		height: 37px;
+		width: 40px;
+		padding: 9px 7px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__line {
+		display: block;
+		height: 3px;
+		margin-bottom: 5px;
+		background-color: $c-dark;
+		transition: .3s ease all, .15s opacity ease;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&_hidden {
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	&_active {
+
+		.toggle {
+			//=====
+
+			&__line {
+
+				&:first-child {
+					transform: translateY(8px) rotate(-45deg);
+				}
+
+				&:nth-child(2) {
+					opacity: 0;
+				}
+
+				&:last-child {
+					transform: translateY(-8px) rotate(45deg);
+				}
+			}
+		}
+	}
+}

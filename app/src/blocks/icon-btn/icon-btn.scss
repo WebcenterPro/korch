@@ -15,6 +15,7 @@
 
 	&__count {
 		display: none;
+		top: 13px;
 		position: absolute;
 		color: white;
 		left: 0;
@@ -22,18 +23,13 @@
 		line-height: 1;
 		width: 26px;
 		text-align: center;
-		top: 0px;
-
-		@media (min-width: $screen-xs) {
-			top: 14px;
-		}
 
 		@media (min-width: $screen-md) {
 			top: 16px;
 		}
 
 		@media (min-width: $screen-lg) {
-			top: 19px;
+			top: 18px;
 		}
 	}
 
@@ -59,15 +55,49 @@
 			width: 27px;
 			height: 34px;
 		}
+
+		.icon-btn {
+			//=====
+
+			&__text {
+				width: 0;
+				visibility: hidden;
+
+				@media (min-width: $screen-md) {
+					width: initial;
+					visibility: visible;
+				}
+			}
+		}
 	}
 
 	&_search {
-		padding-left: 40px;
+
+		@media (min-width: $screen-xs) {
+			padding-left: 40px;
+		}
 
 		&::before {
-			background-position: -54px 0;
-			width: 30px;
-			height: 33px;
+
+			@media (min-width: $screen-xs) {
+				background-position: -54px 0;
+				width: 30px;
+				height: 33px;
+			}
+		}
+
+		.icon-btn {
+			//=====
+
+			&__text {
+				width: 0;
+				visibility: hidden;
+
+				@media (min-width: $screen-md) {
+					width: initial;
+					visibility: visible;
+				}
+			}
 		}
 	}
 
