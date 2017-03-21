@@ -1,37 +1,34 @@
 <!-- HEADER -->
 <header class="header">
 
-	<div class="top header__top">
-
-		<div class="top__left">
-			<div class="toggle header__toggle js-aside_toggle visible-xs">
+	<div class="header__left">
+		<div class="header__toggle-wrap">
+			<div class="toggle header__toggle">
 				<span class="toggle__line"></span>
 				<span class="toggle__line"></span>
 				<span class="toggle__line"></span>
 			</div>
-			<a href="#" class="top__item top__item_phone hidden-xs">8 800 000 00 00</a>
+			<span class="header__item header__item_menu">Меню</span>
 		</div>
-
-		<div class="top__right">
-			<a href="#" class="top__item top__item_reg" data-toggle="modal" data-target=".js-sign">Sign in / Register</a>
-			<a href="#" class="bag top__item">
-				<span class="bag__text">My Bag (</span><span class="bag__count">0</span><span class="bag__text">)</span>
-			</a>
-		</div>
+		<a href="#" class="header__item header__phone hidden-xs">8 (812) 777-77-78</a>
 	</div>
 
-	<div class="header__main">
+	<a class="logo header__logo" href="/">
+		<img class="logo__img" src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Bioaqua">
+	</a>
 
-		<div class="header__wrap">
-
-			<a class="logo header__logo" href="/">
-				<img class="logo__img" src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Bioaqua">
-			</a>
-
-			<div class="search header__search">
-				<input class="search__input" type="text" placeholder="Search">
-				<a class="search__btn" href="#"></a>
-			</div>
-		</div>
+	<div class="header__right">
+		<a href="#" class="icon-btn icon-btn_enter header__item" data-toggle="modal" data-target=".js-sign">
+			<span class="icon-btn__text">Вход</span>
+		</a>
+		<span class="header__line">&nbsp;</span>
+		<a href="#" class="icon-btn icon-btn_bag header__item">
+			<span class="icon-btn__text">Корзина</span>
+			<span class="icon-btn__count">0</span>
+		</a>
+		<span class="header__line">&nbsp;</span>
+		<a href="#" class="icon-btn icon-btn_search header__item">
+			<span class="icon-btn__text">Поиск</span>
+		</a>
 	</div>
 </header>

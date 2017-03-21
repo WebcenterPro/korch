@@ -199,7 +199,8 @@ gulp.task('sprite', function() {
 	var spriteData = gulp.src(app + 'sprites/*.*') // путь, откуда берем картинки для спрайта
 		.pipe(sprite({
 			imgName: 'RESULT.png',
-			cssName: 'RESULT.css'
+			cssName: 'RESULT.css',
+			algorithm: 'left-right'
 		}));
 
 	spriteData.img.pipe(gulp.dest(app + 'sprites/')); // путь, куда сохраняем картинку

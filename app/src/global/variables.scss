@@ -28,49 +28,9 @@ $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1200px;
 
-$top-height: 45px;
-
 $side-xs: 15px;
 $side-sm: 30px;
 $side-lg: 100px;
-@mixin header-sides($selector) {
-
-	@if $selector == margin-left {
-		margin-left: $side-xs;
-
-		@media (min-width: $screen-sm) {
-			margin-left: $side-sm;
-		}
-
-		@media (min-width: $screen-lg) {
-			margin-left: $side-lg;
-		}
-	}
-
-	@if $selector == margin-right {
-		margin-right: $side-xs;
-
-		@media (min-width: $screen-sm) {
-			margin-right: $side-sm;
-		}
-
-		@media (min-width: $screen-lg) {
-			margin-right: $side-lg;
-		}
-	}
-
-	@if $selector == right {
-		right: $side-xs;
-
-		@media (min-width: $screen-sm) {
-			right: $side-sm;
-		}
-
-		@media (min-width: $screen-lg) {
-			right: $side-lg;
-		}
-	}
-}
 
 @mixin bgi-retina($file, $type: 'png', $width: 100%, $height: $width) {
 	background-image: url($file + '.' + $type);
