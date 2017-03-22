@@ -1,3 +1,4 @@
+/* Фоторама */
 $(function() {
 	$('.fotorama').fotorama({
 		width: 600,
@@ -8,3 +9,4 @@ $(function() {
 		nav: 'thumbs'
 	});
 });
+/* ========== */

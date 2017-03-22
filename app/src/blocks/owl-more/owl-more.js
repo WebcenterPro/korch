@@ -1,3 +1,4 @@
+/* Слайдер с карточками товаров */
 $(function() {
 	var owlMore = $('.js-owl-more'); // Контейнер слайдера
 
@@ -35,3 +36,4 @@ $(function() {
 		.find('.owl-next')
 		.append('<i class="fa fa-angle-right owl-more__arrow"></i>');
 });
+/* ========== */
