@@ -57,6 +57,7 @@
 		display: inline-block;
 		font-size: 3rem;
 		vertical-align: middle;
+		margin-left: 5em;
 	}
 
 	&__item {
@@ -76,15 +77,6 @@
 			@media (max-width: $screen-xs - 1) {
 				display: none;
 			}
-		}
-	}
-
-	&__toggle {
-		display: inline-block;
-		vertical-align: middle;
-
-		@media (min-width: $screen-sm) {
-			margin-right: 2em;
 		}
 	}
 }
