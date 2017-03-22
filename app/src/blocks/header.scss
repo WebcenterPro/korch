@@ -14,11 +14,11 @@
 
 		@media (min-width: $screen-md) {
 			margin-left: 2em;
-			width: 360px;
 		}
 
 		@media (min-width: $screen-lg) {
 			margin-left: 3em;
+			width: 460px;
 		}
 	}
 
@@ -28,11 +28,11 @@
 
 		@media (min-width: $screen-md) {
 			margin-right: 2em;
-			width: 360px;
 		}
 
 		@media (min-width: $screen-lg) {
 			margin-right: 3em;
+			min-width: 460px;
 		}
 	}
 

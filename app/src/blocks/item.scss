@@ -84,11 +84,8 @@
 		text-overflow: ellipsis;
 		display: block;
 		text-decoration: none;
-
-		@media (min-width: $screen-xs) {
-			overflow: hidden;
-			position: relative;
-		}
+		overflow: hidden;
+		position: relative;
 	}
 
 	&__desc {
@@ -111,14 +108,15 @@
 	}
 
 	&__buy {
-		margin-bottom: 2.8rem;
+		margin-bottom: 2.6rem;
 		opacity: 0;
 		position: absolute;
-		width: 70%;
-		bottom: 5px;
+		min-width: 130px;
+		bottom: 10px;
 		left: 50%;
 		transform: translateX(-50%);
 		transition: .2s ease;
+		font-size: 1.9rem;
 	}
 
 	&_must {

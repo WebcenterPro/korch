@@ -1,0 +1,42 @@
+.l-adv {
+	text-align: center;
+	padding: 1.5em 15px;
+
+	@media (min-width: $screen-xs) {
+		padding: 3em 15px;
+	}
+
+	&__img {
+		width: 100px;
+		height: 120px;
+		background: no-repeat 50% 50%;
+		margin: 0 auto 1em;
+
+		@media (min-width: $screen-xs) {
+			margin: 0 auto 3em;
+		}
+
+		&_1 {
+			@include bgi-retina('../img/advanced-1', 'png', 99px, 99px);
+		}
+
+		&_2 {
+			@include bgi-retina('../img/advanced-2', 'png', 99px, 100px);
+		}
+
+		&_3 {
+			@include bgi-retina('../img/advanced-3', 'png', 99px, 115px);
+		}
+
+		&_4 {
+			@include bgi-retina('../img/advanced-4', 'png', 99px, 101px);
+		}
+	}
+
+	&__title {
+		font-size: 2.5rem;
+		color: $c-darkest;
+		font-family: $font-second;
+		margin: 0;
+	}
+}

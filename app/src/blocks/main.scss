@@ -13,11 +13,6 @@
 		text-align: center;
 		margin: 0 0 1.5em;
 	}
-	
-	&__adv-wrap {
-		background: $color-lighter url('../img/adv-bg.jpg') 50% -40px;
-		margin: 2.5em 0 5em;
-	}
 
 	&__xxs {
 
@@ -190,7 +185,7 @@
 		padding: 10em 0 5em;
 	}
 
-	&__adv-cont {
+	&__l-adv-cont {
 		padding: 0;
 
 		@media (min-width: $screen-xs) {

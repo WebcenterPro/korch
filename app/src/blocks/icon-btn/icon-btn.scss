@@ -73,13 +73,13 @@
 
 	&_search {
 
-		@media (min-width: $screen-xs) {
+		@media (min-width: $screen-sm) {
 			padding-left: 40px;
 		}
 
 		&::before {
 
-			@media (min-width: $screen-xs) {
+			@media (min-width: $screen-sm) {
 				background-position: -54px 0;
 				width: 30px;
 				height: 33px;
