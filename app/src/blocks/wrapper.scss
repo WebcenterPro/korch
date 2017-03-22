@@ -3,12 +3,12 @@
 
 	&__toggle {
 		position: fixed;
-		top: 1em;
+		top: .8em;
 		left: 1em;
 		z-index: 70;
 
 		@media (min-width: $screen-lg) {
-			top: 2.5em;
+			top: 2.4em;
 			left: 2.5em;
 		}
 	}

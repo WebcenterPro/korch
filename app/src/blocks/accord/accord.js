@@ -1,3 +1,4 @@
+/* Кастомные ползунки в аккордеоне */
 $(function() {
 	var
 		isMoving = false, // Отображает, находится ли аккордеон в движении
@@ -29,3 +30,4 @@ $(function() {
 		accordBody.perfectScrollbar('update');
 	});
 });
+/* ========== */

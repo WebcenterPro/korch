@@ -1,3 +1,4 @@
+/* Слайдер на весь экран */
 $(function() {
 	$('.js-owl').owlCarousel({
 		items: 1,
@@ -9,3 +10,4 @@ $(function() {
 		navText: ''
 	});
 });
+/* ========== */

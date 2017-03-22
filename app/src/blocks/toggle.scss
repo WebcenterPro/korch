@@ -18,6 +18,10 @@
 				color: $c-main;
 			}
 
+			&__text-back {
+				color: $c-main;
+			}
+
 			&__line {
 				background-color: $c-main;
 			}
@@ -35,6 +39,12 @@
 	}
 
 	&__text-open {
+		display: none;
+		vertical-align: middle;
+		transition: .3s ease;
+	}
+
+	&__text-back {
 		display: none;
 		vertical-align: middle;
 		transition: .3s ease;
@@ -90,6 +100,42 @@
 			}
 
 			&__text-open {
+				display: inline-block;
+			}
+
+			&__text-back {
+				display: none;
+			}
+		}
+	}
+
+	&_arrow {
+
+		.toggle {
+			//=====
+
+			&__line {
+
+				&:first-child {
+					transform: rotate(-45deg) translateY(0px) translateX(-3px);
+					width: 70%;
+				}
+
+				&:last-child {
+					transform: rotate(45deg) translateY(0px) translateX(-3px);
+					width: 70%;
+				}
+			}
+
+			&__text {
+				display: none;
+			}
+
+			&__text-open {
+				display: none;
+			}
+
+			&__text-back {
 				display: inline-block;
 			}
 		}
