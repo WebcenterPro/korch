@@ -5,7 +5,7 @@ $(function() {
 		$inputFillClass = 'input__field_fill' // Класс заполненного инпута
 	;
 	
-	$input.on('change', function() { // Движение плейсхолдера
+	$input.on('input', function() { // Движение плейсхолдера
 		if ($(this).val()) {
 			$(this).addClass($inputFillClass);
 		} else {

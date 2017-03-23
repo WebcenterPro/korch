@@ -1,6 +1,11 @@
 .form {
 
-	&__input {
-		margin-bottom: 2.5em;
+	&__btn {
+		margin-top: 1.5em;
+		padding: .5em 1.2em;
+	}
+
+	&__not-last {
+		border-bottom: 0;
 	}
 }

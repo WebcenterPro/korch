@@ -1,4 +1,6 @@
 .sign {
+	font-family: $font-second;
+	font-size: 2.3rem;
 
 	&__outer {
 		margin: 0;
@@ -23,8 +25,8 @@
 	}
 
 	&__wrap {
-		background-color: $color-lightest;
-		box-shadow: 1px 1px 10px #444;
+		background-color: white;
+		box-shadow: 0 0 5px rgba(0, 0, 0, .35);
 
 		&_up,
 		&_forgot {
@@ -34,32 +36,52 @@
 
 	&__header {
 		padding: 0 4em 0 2em;
-		border-bottom: 1px solid $color-lighter;
 		position: relative;
 		overflow: auto;
+		height: 45px;
 
 		@media (min-width: $screen-xs) {
 			padding: 0 4.5em;
 		}
-	}
 
-	&__body {
-		padding: 2em 2em .5em;
-
-		@media (min-width: $screen-xs) {
-			padding: 2.5em 4.5em;
+		@media (min-width: $screen-md) {
+			height: 60px;
 		}
 	}
 
+	&__body {
+		padding: 0 2em .5em;
+
+		@media (min-width: $screen-xs) {
+			padding: 0 4.5em 2.2em;
+		}
+	}
+
+	&__title {
+		font-family: $font-main;
+		font-weight: 700;
+		font-size: 3.3rem;
+		color: $c-dark;
+		text-align: center;
+		margin: 0 0 .8em;
+	}
+
 	&__descr {
-		margin: 1.6em 0 1.3em;
-		color: $color-main;
-		font-size: 1.9rem;
+		margin: 1.1em 0 1.1em;
+		color: $c-dark;
+
+		&_inline {
+			display: inline-block;
+			margin: 1.1em 0 0 1.5em;
+		}
+
+		&_lite {
+			color: $c-light-3;
+		}
 	}
 
 	&__or {
-		font-size: 1.8rem;
-		margin: -1em 0 1.5em 0;
+		margin: 1em 0;
 		line-height: 1em;
 		text-align: center;
 	}
@@ -73,15 +95,19 @@
 		right: 0;
 		top: 0;
 		bottom: 0;
-		width: 4em;
-		background: no-repeat 50%;
+		width: 45px;
+		background: $c-main no-repeat 50% 50%;
 		@include bgi-retina('../img/close', 'png', 28px);
 		cursor: pointer;
 		transition: .3s ease;
 
+		@media (min-width: $screen-md) {
+			width: 60px;
+		}
+
 		&:hover,
 		&:focus {
-			background-color: $color-lighter;
+			background-color: darken($c-main, 15%);
 		}
 	}
 }

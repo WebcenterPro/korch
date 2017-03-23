@@ -14,6 +14,10 @@
 	line-height: 1;
 	outline: none;
 
+	&_lower {
+		text-transform: none;
+	}
+
 	&:hover,
 	&:focus {
 		color: white;

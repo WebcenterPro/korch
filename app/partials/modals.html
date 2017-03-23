@@ -6,29 +6,29 @@
 
 			<div class="sign__header">
 				<div class="sign__close" data-dismiss="modal"></div>
-				<p class="sign__descr">Don`t have account? <a class="sign__link js-sign__link_up" href="#">Create account</a></p>
 			</div>
 
 			<div class="sign__body">
+				<h4 class="sign__title">Вход</h4>
+				<p class="sign__descr">Нет аккаунта? <a class="sign__link js-sign__link_up" href="#">Зарегистрируйтесь</a></p>
+
 				<form class="form sign__form" action="/">
 
-					<span class="input input_wide form__input">
-						<input class="input__field" type="email" required>
-						<label class="input__label">
-							<span class="input__label-content" data-content="E-mail">E-mail</span>
-						</label>
+					<span class="input input_wide">
+						<input class="input__field form__not-last" type="text" required>
+						<label class="input__label">Логин *</label>
 					</span>
 
-					<span class="input input_wide form__input">
+					<span class="input input_wide">
 						<input class="input__field" type="password" required>
-						<label class="input__label">
-							<span class="input__label-content" data-content="Password">Password</span>
-						</label>
+						<label class="input__label">Пароль *</label>
 					</span>
 
-					<input class="button button_wide" type="submit" value="Sign in">
+					<input class="button button_lower form__btn" type="submit" value="Войти">
+					<p class="sign__descr sign__descr_inline"><a class="sign__link js-sign__link_forgot" href="#">Забыли пароль?</a></p>
 				</form>
-				<p class="sign__descr"><a class="sign__link js-sign__link_forgot" href="#">Forgot your password?</a></p>
+
+				<p class="sign__descr sign__descr_lite">* - поля, обязательные для заполнения</p>
 			</div>
 		</div>
 
@@ -36,42 +36,38 @@
 
 			<div class="sign__header">
 				<div class="sign__close" data-dismiss="modal"></div>
-				<p class="sign__descr">Do already have account? <a class="sign__link js-sign__link_in" href="#">Sign in</a></p>
 			</div>
 
 			<div class="sign__body">
+				<h4 class="sign__title">Регистрация</h4>
+				<p class="sign__descr">Уже есть аккаунт? <a class="sign__link js-sign__link_in" href="#">Войдите</a></p>
+
 				<form class="form sign__form">
 
-					<span class="input input_wide form__input">
-						<input class="input__field" type="text" required>
-						<label class="input__label">
-							<span class="input__label-content" data-content="Name">Name</span>
-						</label>
+					<span class="input input_wide">
+						<input class="input__field form__not-last" type="text" required>
+						<label class="input__label">Имя *</label>
 					</span>
 
-					<span class="input input_wide form__input">
-						<input class="input__field" type="email" required>
-						<label class="input__label">
-							<span class="input__label-content" data-content="E-mail">E-mail</span>
-						</label>
+					<span class="input input_wide">
+						<input class="input__field form__not-last" type="email" required>
+						<label class="input__label">E-mail *</label>
 					</span>
 
-					<span class="input input_wide form__input">
+					<span class="input input_wide">
+						<input class="input__field form__not-last" type="password" required>
+						<label class="input__label">Пароль *</label>
+					</span>
+
+					<span class="input input_wide">
 						<input class="input__field" type="password" required>
-						<label class="input__label">
-							<span class="input__label-content" data-content="Password">Password</span>
-						</label>
+						<label class="input__label">Подтверждение пароля *</label>
 					</span>
 
-					<span class="input input_wide form__input">
-						<input class="input__field" type="password" required>
-						<label class="input__label">
-							<span class="input__label-content" data-content="Confirm password">Confirm password</span>
-						</label>
-					</span>
-
-					<input class="button button_wide" type="submit" value="Sign up">
+					<input class="button button_lower form__btn" type="submit" value="Зарегистрироваться">
 				</form>
+
+				<p class="sign__descr sign__descr_lite">* - поля, обязательные для заполнения</p>
 			</div>
 		</div>
 
@@ -79,33 +75,31 @@
 
 			<div class="sign__header">
 				<div class="sign__close" data-dismiss="modal"></div>
-				<p class="sign__descr">Forgot your password? Enter your login or E-mail.</p>
 			</div>
 
 			<div class="sign__body">
+				<h4 class="sign__title">Восстановление пароля</h4>
+				<p class="sign__descr">Забыли пароль? Введите логин или E-mail.</p>
+
 				<form class="form sign__form js-sign__form_forgot" action="/">
 
-					<span class="input input_wide form__input">
+					<span class="input input_wide">
 						<input class="input__field" type="text">
-						<label class="input__label">
-							<span class="input__label-content" data-content="Login">Login</span>
-						</label>
+						<label class="input__label">Логин</label>
 					</span>
 
-					<p class="sign__or">or</p>
+					<p class="sign__or">или</p>
 
-					<span class="input input_wide form__input">
+					<span class="input input_wide">
 						<input class="input__field" type="email">
-						<label class="input__label">
-							<span class="input__label-content" data-content="E-mail">E-mail</span>
-						</label>
+						<label class="input__label">E-mail</label>
 					</span>
 
-					<input class="button button_wide" type="submit" value="Send">
+					<input class="button button_lower form__btn" type="submit" value="Восстановить пароль">
 				</form>
-				<p class="sign__descr text-center">
-					<a class="sign__link js-sign__link_in" href="#">Sign in</a> |
-					<a class="sign__link js-sign__link_up" href="#">Sign up</a>
+				<p class="sign__descr">
+					<a class="sign__link js-sign__link_in" href="#">Войти</a> |
+					<a class="sign__link js-sign__link_up" href="#">Зарегистрироваться</a>
 				</p>
 			</div>
 		</div>
