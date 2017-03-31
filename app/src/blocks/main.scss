@@ -1,4 +1,9 @@
 .main {
+	margin-top: $header;
+
+	@media (min-width: $screen-xs) {
+		margin-top: $header-lg;
+	}
 
 	&__gap {
 		margin-bottom: 5em;

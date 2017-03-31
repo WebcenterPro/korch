@@ -3,13 +3,22 @@
 
 	&__toggle {
 		position: fixed;
-		top: .8em;
-		left: 1em;
+		top: .5em;
+		left: .7em;
 		z-index: 70;
 
+		@media (min-width: $screen-xs) {
+			top: 1.8em;
+			left: 1em;
+		}
+
+		@media (min-width: $screen-md) {
+			top: 1.7em;
+		}
+
 		@media (min-width: $screen-lg) {
-			top: 2.4em;
-			left: 2.5em;
+			top: 1.4em;
+			left: 1.4em;
 		}
 	}
 }

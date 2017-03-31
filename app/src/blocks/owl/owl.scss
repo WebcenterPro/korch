@@ -4,15 +4,15 @@
 	&__item {
 		background: no-repeat 50% 50%;
 		background-size: cover;
-		padding-bottom: 100%;
+		padding-bottom: 165%;
 		position: relative;
 
 		@media (min-width: $screen-xs) {
-			padding-bottom: 60%;
+			padding-bottom: 65%;
 		}
 
-		@media (min-width: $screen-md) {
-			padding-bottom: 40%;
+		@media (min-width: $screen-lg) {
+			padding-bottom: 46%;
 		}
 
 		&_img-1 {
@@ -55,6 +55,11 @@
 		transition: .3s ease;
 		vertical-align: middle;
 
+		@media (min-width: $screen-md) {
+			width: 18px;
+			height: 18px;
+		}
+
 		&:last-child {
 			margin-right: 0;
 		}
@@ -62,6 +67,11 @@
 		&.active {
 			width: 20px;
 			height: 20px;
+
+			@media (min-width: $screen-md) {
+				width: 30px;
+				height: 30px;
+			}
 		}
 	}
 }

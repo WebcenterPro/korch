@@ -25,11 +25,11 @@
 		text-align: center;
 
 		@media (min-width: $screen-md) {
-			top: 16px;
+			top: 15px;
 		}
 
 		@media (min-width: $screen-lg) {
-			top: 18px;
+			top: 17px;
 		}
 	}
 
@@ -54,9 +54,14 @@
 			background-position: -27px 0;
 			width: 27px;
 			height: 34px;
+
+			@include retina() {
+				width: 28px;
+			}
 		}
 
 		.icon-btn {
+
 			//=====
 
 			&__text {
@@ -64,7 +69,7 @@
 				visibility: hidden;
 
 				@media (min-width: $screen-md) {
-					width: initial;
+					width: auto;
 					visibility: visible;
 				}
 			}
@@ -94,7 +99,7 @@
 				visibility: hidden;
 
 				@media (min-width: $screen-md) {
-					width: initial;
+					width: auto;
 					visibility: visible;
 				}
 			}
@@ -106,7 +111,12 @@
 		&::before {
 			background-position: 0 0;
 			width: 27px;
-			height: 33px;
+			height: 34px;
+
+			@include retina() {
+				width: 27px;
+				height: 34px;
+			}
 		}
 
 		.icon-btn {

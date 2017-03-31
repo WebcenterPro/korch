@@ -1,0 +1,66 @@
+.owl-vert {
+	position: relative;
+
+	&__item {
+		margin: 3em;
+	}
+
+	&__desc {
+		font-family: $font-second;
+		color: $c-main;
+		font-size: 3rem;
+		margin: 0 0 .5em;
+	}
+
+	&__title {
+		color: $c-dark;
+		font-size: 4.5rem;
+		font-weight: 600;
+		margin: 0;
+		line-height: 1.4;
+	}
+
+	&__img {
+		background: no-repeat 50% 50%;
+		background-size: cover;
+		position: absolute;
+
+		&_1 {
+			background-image: url('../img/owl-vert-1.png');
+		}
+	}
+
+	&__dots {
+		position: absolute;
+		left: 10%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&__dot {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		margin: 0 auto 20px;
+		background-color: $c-main-light;
+		display: block;
+		cursor: pointer;
+		transition: .3s ease;
+		vertical-align: middle;
+
+		@media (min-width: $screen-md) {
+			width: 18px;
+			height: 18px;
+		}
+
+		&.active {
+			width: 20px;
+			height: 20px;
+
+			@media (min-width: $screen-md) {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+}

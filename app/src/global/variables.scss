@@ -28,15 +28,21 @@ $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1200px;
 
-$side-xs: 15px;
-$side-sm: 30px;
-$side-lg: 100px;
+$header: 48px;
+$header-lg: 82px;
+
+@mixin retina() {
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min-resolution: 144dpi) {
+		@content;
+	}
+}
 
 @mixin bgi-retina($file, $type: 'png', $width: 100%, $height: $width) {
 	background-image: url($file + '.' + $type);
 
-	@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-	only screen and (min-resolution: 144dpi) {
+	@include retina() {
 		background-image: url($file + '@2x.' + $type);
 
 		@if $width == cover or $width == contain {

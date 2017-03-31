@@ -3,11 +3,17 @@
 	position: fixed;
 	font-size: 1.8rem;
 	z-index: 50;
-	background: linear-gradient(to bottom, white 5%, rgba(255, 255, 255, .8) 50%, transparent 100%);
+	background: linear-gradient(to bottom, white, rgba(255, 255, 255, .92));
+	box-shadow: 0 0 3px $c-light-3;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1.3em 0 1em;
+	padding: 1em 0 1em;
+	height: $header;
+
+	@media (min-width: $screen-xs) {
+		height: $header-lg;
+	}
 
 	&__left {
 		margin-left: 15px;
@@ -37,17 +43,40 @@
 	}
 
 	&__logo {
-		display: none;
+		width: 39px;
+		height: 39px;
+		margin-left: 64px;
 
 		@media (min-width: $screen-xs) {
-			display: block;
-			width: 160px;
-			height: 30px;
+			width: 116px;
+			margin-left: 79px;
 		}
 
-		@media (min-width: $screen-lg) {
-			width: 413px;
-			height: 78px;
+		@media (min-width: $screen-sm) {
+			margin-left: 0;
+		}
+
+		.logo {
+			//=====
+
+			&__img {
+
+				&:first-child {
+					display: none;
+
+					@media (min-width: $screen-xs) {
+						display: block;
+					}
+				}
+
+				&:last-child {
+					display: block;
+
+					@media (min-width: $screen-xs) {
+						display: none;
+					}
+				}
+			}
 		}
 	}
 
