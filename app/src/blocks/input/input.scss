@@ -26,6 +26,10 @@
 			}
 		}
 
+		&:invalid {
+			box-shadow: none;
+		}
+
 		&_fill {
 
 			+ .input {

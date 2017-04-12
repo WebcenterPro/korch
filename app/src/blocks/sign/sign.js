@@ -16,10 +16,23 @@ $(function() {
 		formForgot = sign.find('.js-sign__form_forgot'), // Форма для забытого пароля
 
 		$input = 'input__field', // Класс инпута
-		$inputFillClass = 'input__field_fill' // Класс заполненного инпута
+		$inputFillClass = 'input__field_fill', // Класс заполненного инпута
+
+		$header = $('.header') // Шапка
 	;
 
+	sign.on('show.bs.modal', function() { // Фикс прыгающей шапки
+		if (document.body.scrollHeight != document.body.offsetHeight) {
+			$header.css('padding-right', '17px');
+		}
+	});
+
 	sign.on('shown.bs.modal', function() { // Фокус при открытии модалки
+		$(this).find('input[type="text"]').each(function() {
+			if ($(this).val()) {
+				$(this).addClass($inputFillClass);
+			}
+		});
 		$(this).find('input[type="text"]:first').focus();
 	});
 
@@ -32,6 +45,8 @@ $(function() {
 			.find('.' + $input)
 			.val('')
 			.removeClass($inputFillClass);
+
+		$header.css('padding-right', '0');
 	});
 
 	// Смена контейнеров при клике на ссылки
@@ -81,5 +96,14 @@ $(function() {
 			return false;
 		}
 	});
+
+	function getScroll(a) {
+		var d = document,
+			b = d.body,
+			e = d.documentElement,
+			c = "client" + a;
+		a = "scroll" + a;
+		return /CSS/.test(d.compatMode)? (e[c]< e[a]) : (b[c]< b[a])
+	}
 });
 /* ========== */

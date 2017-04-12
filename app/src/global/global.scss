@@ -111,3 +111,14 @@ hr {
 	border-color: $c-dark;
 	margin: 0;
 }
+
+textarea {
+	-webkit-appearance: none;
+	border-radius: 0;
+	resize: none;
+
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+}

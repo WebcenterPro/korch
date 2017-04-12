@@ -1,8 +1,35 @@
 .owl-vert {
-	position: relative;
 
 	&__item {
-		margin: 3em;
+		position: relative;
+		margin: 15px 15px 3em;
+
+		@media (min-width: $screen-xs) {
+			margin: 3em;
+		}
+	}
+
+	&__i {
+		margin: 2em 0;
+
+		@media (min-width: $screen-xs) {
+			margin: 4em 0 2em;
+		}
+
+		@media (min-width: $screen-sm) {
+			margin: 7em 0;
+			width: 70%;
+			position: relative;
+			z-index: 1;
+		}
+
+		@media (min-width: $screen-md) {
+			margin: 9em 0;
+		}
+
+		@media (min-width: $screen-lg) {
+			margin: 12em 0;
+		}
 	}
 
 	&__desc {
@@ -14,16 +41,35 @@
 
 	&__title {
 		color: $c-dark;
-		font-size: 4.5rem;
 		font-weight: 600;
 		margin: 0;
 		line-height: 1.4;
+		text-shadow: 1px 1px 1px white;
+		font-size: 3.5rem;
+
+		@media (min-width: $screen-xs) {
+			font-size: 4rem;
+		}
+
+		@media (min-width: $screen-sm) {
+			font-size: 4.5rem;
+		}
 	}
 
 	&__img {
 		background: no-repeat 50% 50%;
 		background-size: cover;
-		position: absolute;
+		padding-bottom: 80%;
+
+		@media (min-width: $screen-sm) {
+			padding-bottom: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 50%;
+			height: 100%;
+			z-index: 0;
+		}
 
 		&_1 {
 			background-image: url('../img/owl-vert-1.png');
@@ -32,21 +78,33 @@
 
 	&__dots {
 		position: absolute;
-		left: 10%;
-		top: 50%;
-		transform: translateY(-50%);
+		left: 50%;
+		bottom: 20px;
+		transform: translateX(-50%);
+
+		@media (min-width: $screen-sm) {
+			left: 20px;
+			top: 50%;
+			bottom: auto;
+			transform: translateY(-50%);
+		}
 	}
 
 	&__dot {
 		width: 12px;
 		height: 12px;
 		border-radius: 50%;
-		margin: 0 auto 20px;
 		background-color: $c-main-light;
-		display: block;
 		cursor: pointer;
 		transition: .3s ease;
 		vertical-align: middle;
+		display: inline-block;
+		margin: 0 10px;
+
+		@media (min-width: $screen-sm) {
+			display: block;
+			margin: 0 auto 20px;
+		}
 
 		@media (min-width: $screen-md) {
 			width: 18px;

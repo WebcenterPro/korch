@@ -11,18 +11,20 @@
 		.popular {
 
 			&__img {
-				filter: drop-shadow(3px 3px 3px darken($c-light-2, 20%));
+				box-shadow: 0 2px 5px darken($c-light-2, 15%);
 			}
 		}
 	}
 
 	&__img {
-		width: 90%;
-		padding-bottom: 90%;
+		width: 80%;
+		padding-bottom: 80%;
 		margin: 0 auto 3em;
 		background: no-repeat 50% 50%;
-		background-size: 100% 100%;
+		background-size: cover;
 		transition: .2s ease;
+		border: 10px solid $c-light-2;
+		box-sizing: content-box;
 
 		&_1 {
 			background-image: url('../img/popular-1.png');

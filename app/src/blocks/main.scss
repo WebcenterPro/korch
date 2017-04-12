@@ -89,7 +89,7 @@
 
 	&__pag {
 		text-align: center;
-		margin: 3em 0 2.5em;
+		margin: 3em 0 0;
 	}
 
 	&__sub {
@@ -106,17 +106,21 @@
 	}
 
 	&__section {
-		background: no-repeat 50% 0;
+		background: no-repeat 50% 60%;
 		background-size: cover;
-		padding-bottom: 100%;
+		background-origin: content-box;
 		position: relative;
+		width: 100%;
+		min-height: 100vh;
+		padding-top: $header;
+		margin-top: -$header;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 
 		@media (min-width: $screen-xs) {
-			padding-bottom: 60%;
-		}
-
-		@media (min-width: $screen-md) {
-			padding-bottom: 40%;
+			padding-top: $header-lg;
+			margin-top: -$header-lg;
 		}
 
 		&_bright {
@@ -129,12 +133,10 @@
 	}
 
 	&__full-center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	text-align: center;
-}
+		flex-grow: 1;
+		position: relative;
+		margin: 5em 0;
+	}
 
 	&__404 {
 		position: relative;
@@ -215,22 +217,26 @@
 	}
 
 	&__head {
-		display: none;
-
-		@media (min-width: $screen-sm) {
-			display: block;
-			font-size: 9rem;
-			font-family: $font-second;
-			color: $c-dark;
-			font-weight: bold;
-		}
+		display: block;
+		width: 100%;
+		font-size: 9rem;
+		font-family: $font-second;
+		color: $c-dark;
+		font-weight: bold;
+		text-align: center;
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 
 	&__full-bottom {
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%) translateY(-50%);
+		padding-bottom: 5em;
+		text-align: center;
+
+		@media (min-width: $screen-sm) {
+			text-align: left;
+		}
 	}
 
 	&__img-1 {
